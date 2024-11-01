@@ -1,12 +1,40 @@
 @use 'base' as *;
 
+* {
+    border: 1px dashed red;
+}
+
+// Generate all the colors in css so we can use them
+:root {
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+}
 
 body { 
     font-size: $font-size;
+    background-color: $background;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $max-width;
+}
+
+.row {
+    margin: 0;
+    display: flex;
+    gap: $gap;
+
+    @include mq(small) {
+        display: block;
+    }
 }
 
 .nav {
-    color: $yellow-main;
+    color: --clr-primary-500;
 
     ul {
        list-style: none;
@@ -14,20 +42,51 @@ body {
     }
 }
 
-.card {
-    &__title {
-        font-weight: 200;
-    }
+.hero {
+    display: flex;
+    min-height: 611px;
+    align-items: center;
+    background-image: url('img/hero-background.webp');
+}
 
-   @include mq(small) {
-        padding: 2em;
+.info {
+    width: 100%;
+    text-align: center;
+    padding: 0.7em;
+
+    &__black {
+        background-color: #000;
+        color: #fff;
     }
 }
 
-:root {
-    @each $color, $shades in $colors {
-        @each $shade, $value in $shades {
-            --clr-#{$color}-#{$shade}: #{$value};
-        }
+.news {
+    display: grid;
+    grid-template-columns: 23.4em 23.4em;
+    margin-top: 1em;
+    grid-gap: 1em;
+
+    // &__item + &__item {
+    //     margin-left: 1em;
+    // }
+
+    &__item {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
     }
+
+    h1 {
+        font-size: 1.4em;
+    }
+}
+
+.footer{
+    margin-top: 1em;
+
+    &__links {
+        justify-content: center;
+    }
+
 }
