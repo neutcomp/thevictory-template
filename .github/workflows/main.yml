@@ -69,4 +69,4 @@ jobs:
           username: 511198519.swh.strato-hosting.eu
           password: ${{ secrets.ftp_password }}
           local-dir: ./src/
-          server-dir: /wp-content/themes/the-victory-template
+          server-dir: /wp-content/themes/the-victory-template/
