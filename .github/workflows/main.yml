@@ -5,11 +5,12 @@ jobs:
     name: run tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - uses: Adzz/jest_test_action@v1.0.0
-        with:
-          command: build
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npm run parcel build src/index.html
+
       - name: SFTP upload
         uses: Dylan700/sftp-upload-action@latest
         with:
@@ -17,4 +18,4 @@ jobs:
           username: ${{secrets.FTP_USERNAME}}
           password: ${{secrets.FTP_PASSWORD}}
           port: 22
-          uploads: ./src/ => ./the-victory-template/
+          uploads: ./dist/ => ./the-victory-template/
