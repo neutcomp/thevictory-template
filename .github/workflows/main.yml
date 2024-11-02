@@ -10,8 +10,8 @@ jobs:
       - name: SFTP upload
         uses: Dylan700/sftp-upload-action@latest
         with:
-          server: sftp.server.com
-          username: jason-bourne
+          server: ssh.strato.com
+          username: 511198519.swh.strato-hosting.eu
           password: ${{secrets.FTP_PASSWORD}}
           port: 22
           uploads: ./src/ => ./wp-content/themes/the-victory-template/
