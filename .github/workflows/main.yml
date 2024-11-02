@@ -1,12 +1,15 @@
 on: push
 name: 🚀 Build Sass and deploy website on push
 jobs:
-  build_css:
+  tests:
+    name: run tests
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - uses: Adzz/jest_test_action@v1.0.0
+        with:
+          command: build
       - name: SFTP upload
         uses: Dylan700/sftp-upload-action@latest
         with:
