@@ -9,7 +9,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
       - run: npm ci
-      - run: npm run parcel build src/index.html
+      - run: npm run parcel build ./src/index.html
 
       - name: SFTP upload
         uses: Dylan700/sftp-upload-action@latest
