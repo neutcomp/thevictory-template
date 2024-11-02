@@ -66,8 +66,8 @@ jobs:
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: "ssh.strato.com"
-          username: "511198519.swh.strato-hosting.eu"
-          ssh_private_key: ${{ secrets.ftp_password }}
+          username: "github@thevictory.nl"
+          ssh_private_key: ${{ secrets.ftp-password }}
           local_path: "./src/"
           remote_path: "/wp-content/themes/the-victory-template/"
           sftpArgs: "-o ConnectTimeout=5"
