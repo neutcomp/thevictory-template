@@ -10,6 +10,8 @@ jobs:
         uses: actions/setup-node@v4
       - run: npm ci
       - run: npm run parcel build ./src/index.html
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: SFTP upload
         uses: Dylan700/sftp-upload-action@latest
