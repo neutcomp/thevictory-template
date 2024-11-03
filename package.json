@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html --public-url https://thevictory.nl/wp-content/themes/the-victory-template/"
   },
   "repository": {
     "type": "git",
