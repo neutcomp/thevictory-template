@@ -45,18 +45,24 @@ body {
 .hero {
     display: flex;
     min-height: 611px;
+    
     align-items: center;
     background-image: url('./img/hero-background.webp');
 }
 
 .info {
-    width: 100%;
+    max-width: 45%;
     text-align: center;
     padding: 0.7em;
+    justify-content: left;
 
     &__black {
-        background-color: #000;
-        color: #fff;
+        background-color: $background-black;
+        color: white;
+    }
+
+    &__yellow {
+        background-color: $background-yellow;
     }
 }
 
@@ -71,8 +77,8 @@ body {
     // }
 
     &__item {
-        background-color: #444;
-        color: #fff;
+        background-color: $background-grey;
+        color: white;
         border-radius: 5px;
         padding: 20px;
     }
