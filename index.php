@@ -12,7 +12,7 @@
         <a href="/"
           ><img
             class="logo"
-            src="img/the-victory-logo.webp"
+            src="<?php echo get_theme_file_uri('./img/the-victory-logo.webp'); ?>"
             alt="The Victory logo"
         /></a>
 
