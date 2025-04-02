@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tafeltennis Vereniging The Victory uit Weesp</title>
-    <link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css') ?>" />
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css'); ?>" />
   </head>
   <body>
     <div class="container">
@@ -34,7 +34,7 @@
             <li class="nav__items">
               <a href="#"
                 ><img
-                  src="img/google-translate-flags.png"
+                  src="<?php echo get_theme_file_uri('img/google-translate-flags.png'); ?>"
                   alt="Google Translate"
               /></a>
             </li>
@@ -94,7 +94,7 @@
     <div class="container">
       <div class="news">
         <div class="news__item">
-          <img src="<?php echo get_theme_file_uri('img/halloween.webp') ?>" alt="Halloween Blacklight Toernooi" />
+          <img src="<?php echo get_theme_file_uri('img/halloween.webp'); ?>" alt="Halloween Blacklight Toernooi" />
           <h1>Tafeltennis in het donker</h1>
           <p>
             Ja tafeltennissen in het donker of wel het Halloween Blacklight
@@ -107,7 +107,7 @@
         </div>
 
         <div class="news__item">
-          <img src="<?php echo get_theme_file_uri('img/halloween.webp') ?>" alt="Halloween Blacklight Toernooi" />
+          <img src="<?php echo get_theme_file_uri('img/halloween.webp'); ?>" alt="Halloween Blacklight Toernooi" />
           <h1>Tafeltennis in het donker</h1>
           <p>
             Ja tafeltennissen in het donker of wel het Halloween Blacklight
@@ -120,7 +120,7 @@
         </div>
 
         <div class="news__item">
-          <img src="<?php echo get_theme_file_uri('img/halloween.webp') ?>" alt="Halloween Blacklight Toernooi" />
+          <img src="<?php echo get_theme_file_uri('img/halloween.webp'); ?>" alt="Halloween Blacklight Toernooi" />
           <h1>Tafeltennis in het donker</h1>
           <p>
             Ja tafeltennissen in het donker of wel het Halloween Blacklight
@@ -152,7 +152,7 @@
 
         <div class="row footer__links">
           <a href="https://www.e-boekhouden.nl/?c=vssp">
-            <img src="<?php echo get_theme_file_uri('img/e-boekhouding-logo.png')?>" alt="e-boekhouding logo" />
+            <img src="<?php echo get_theme_file_uri('img/e-boekhouding-logo.png'); ?>" alt="e-boekhouding logo" />
           </a>
         </div>
       </footer>
