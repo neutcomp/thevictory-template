@@ -4,8 +4,7 @@
   "description": "The Victory Wordpress Template",
   "main": "index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build ./src/index.html --public-url https://thevictory.nl/wp-content/themes/the-victory-template/"
+    "build": "sass --watch scss/main.scss style.css"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/neutcomp/thevictory-template#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
     "sass": "^1.86.0"
   }
 }

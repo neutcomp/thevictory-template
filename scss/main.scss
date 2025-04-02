@@ -14,8 +14,21 @@
 }
 
 body { 
-    font-size: $font-size;
-    background-color: $background;
+    font-family: $font-family;
+    font-size: $font-size-large;
+    background-color: $background-yellow;
+
+    h1 {
+        font-size: $font-size-large;
+    }
+
+    p {
+        font-size: $font-size-small;
+    }
+
+     a {
+        font-size: $font-size-small;
+    }
 }
 
 .container {
@@ -34,7 +47,7 @@ body {
 }
 
 .nav {
-    color: --clr-primary-500;
+    color: var(--clr-primary-500);
 
     ul {
        list-style: none;
@@ -72,19 +85,12 @@ body {
     margin-top: 1em;
     grid-gap: 1em;
 
-    // &__item + &__item {
-    //     margin-left: 1em;
-    // }
 
     &__item {
         background-color: $background-grey;
         color: white;
         border-radius: 5px;
         padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.4em;
     }
 }
 
