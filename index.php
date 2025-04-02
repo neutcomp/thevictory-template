@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tafeltennis Vereniging The Victory uit Weesp</title>
-    <link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css'); ?>" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <a href="/"
-          ><img
-            class="logo"
-            src="<?php echo get_theme_file_uri('./img/the-victory-logo.webp'); ?>"
-            alt="The Victory logo"
-        /></a>
-
-        <nav class="nav">
-          <ul>
-            <li class="nav__items">
-              <a href="/algemene-informatie/">Informatie</a>
-            </li>
-            <li class="nav__items">
-              <a href="/algemene-informatie/agenda/">Agenda</a>
-            </li>
-            <li class="nav__items"><a href="/tafeltennis/">Tafeltennis</a></li>
-            <li class="nav__items">
-              <a
-                href="https://www.flickr.com/photos/bjornvanderneut/collections/72157704032038694/"
-                >Foto's</a
-              >
-            </li>
-            <li class="nav__items">
-              <a href="#"
-                ><img
-                  src="<?php echo get_theme_file_uri('img/google-translate-flags.png'); ?>"
-                  alt="Google Translate"
-              /></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+<?php get_header(); ?>
 
     <div class="container">
       <div class="hero">
@@ -134,28 +91,4 @@
       </div>
     </div>
 
-    <div class="container">
-      <footer class="footer">
-        <div class="row footer__links">
-          <a href="/algemene-informatie/veilig-sportklimaat/"
-            >Veilig sportklimaat</a
-          >
-          <a href="/algemene-informatie/privacyverklaring/"
-            >Privacyverklaring</a
-          >
-          <a href="/algemene-informatie/contactformulier/">Contact formulier</a>
-        </div>
-
-        <div class="row footer__links">
-          <p>The Victory © 's Gravelandseweg 3a, 1381 HH Weesp</p>
-        </div>
-
-        <div class="row footer__links">
-          <a href="https://www.e-boekhouden.nl/?c=vssp">
-            <img src="<?php echo get_theme_file_uri('img/e-boekhouding-logo.png'); ?>" alt="e-boekhouding logo" />
-          </a>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
+    <?php get_footer(); ?>
