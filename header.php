@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><!-- wp:site-title /--></title>
+    <title><?php echo get_bloginfo('name'); ?></title>
+		<meta name="description" content="<?php echo get_bloginfo('description'); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css'); ?>" />
   </head>
   <body>
