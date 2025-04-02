@@ -12,7 +12,7 @@
         <a href="/"
           ><img
             class="logo"
-            src="./img/the-victory-logo.webp"
+            src="img/the-victory-logo.webp"
             alt="The Victory logo"
         /></a>
 

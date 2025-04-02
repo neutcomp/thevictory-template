@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/neutcomp/thevictory-template#readme",
   "devDependencies": {
-    "sass": "^1.86.0"
+    "sass": "^1.86.0",
+    "@biomejs/biome": "^1.9.4"
   }
 }

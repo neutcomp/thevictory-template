@@ -29,3 +29,5 @@ jobs:
             package.json
             package-lock.json
             .gitignore
+            LICENSE
+            README.md
