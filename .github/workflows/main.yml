@@ -21,11 +21,4 @@ jobs:
           password: ${{secrets.FTP_PASSWORD}}
           port: 22
           uploads: ./ => ./the-victory-template/
-          ignore: |
-          *.git
-          *.github
-          *.node_modules
-          *.scss
-          package.json
-          package-lock.json
-          .gitignore
+          ignore: *.git, *.github, *.node_modules, *.scss, package.json, package-lock.json, .gitignore
