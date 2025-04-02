@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tafeltennis Vereniging The Victory uit Weesp</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css') ?>" />
   </head>
   <body>
     <div class="container">
@@ -94,7 +94,7 @@
     <div class="container">
       <div class="news">
         <div class="news__item">
-          <img src="img/halloween.webp" alt="Halloween Blacklight Toernooi" />
+          <img src="<?php echo get_theme_file_uri('img/halloween.webp') ?>" alt="Halloween Blacklight Toernooi" />
           <h1>Tafeltennis in het donker</h1>
           <p>
             Ja tafeltennissen in het donker of wel het Halloween Blacklight
@@ -107,7 +107,7 @@
         </div>
 
         <div class="news__item">
-          <img src="img/halloween.webp" alt="Halloween Blacklight Toernooi" />
+          <img src="<?php echo get_theme_file_uri('img/halloween.webp') ?>" alt="Halloween Blacklight Toernooi" />
           <h1>Tafeltennis in het donker</h1>
           <p>
             Ja tafeltennissen in het donker of wel het Halloween Blacklight
@@ -120,46 +120,7 @@
         </div>
 
         <div class="news__item">
-          <img src="img/halloween.webp" alt="Halloween Blacklight Toernooi" />
-          <h1>Tafeltennis in het donker</h1>
-          <p>
-            Ja tafeltennissen in het donker of wel het Halloween Blacklight
-            Toernooi is weer geweest. Het concept is simpel alle lichten uit
-            blacklight TL lampen aan en tafeltennissen maar. Nou zo simpel is
-            het nou ook weer niet er gaat wel wat tijd vooraf om alles op te
-            bouwen en iedereen te enthousiasmeren om mee te doen 😉
-          </p>
-          <a href="">Lees verder</a>
-        </div>
-
-        <div class="news__item">
-          <img src="img/halloween.webp" alt="Halloween Blacklight Toernooi" />
-          <h1>Tafeltennis in het donker</h1>
-          <p>
-            Ja tafeltennissen in het donker of wel het Halloween Blacklight
-            Toernooi is weer geweest. Het concept is simpel alle lichten uit
-            blacklight TL lampen aan en tafeltennissen maar. Nou zo simpel is
-            het nou ook weer niet er gaat wel wat tijd vooraf om alles op te
-            bouwen en iedereen te enthousiasmeren om mee te doen 😉
-          </p>
-          <a href="">Lees verder</a>
-        </div>
-
-        <div class="news__item">
-          <img src="img/halloween.webp" alt="Halloween Blacklight Toernooi" />
-          <h1>Tafeltennis in het donker</h1>
-          <p>
-            Ja tafeltennissen in het donker of wel het Halloween Blacklight
-            Toernooi is weer geweest. Het concept is simpel alle lichten uit
-            blacklight TL lampen aan en tafeltennissen maar. Nou zo simpel is
-            het nou ook weer niet er gaat wel wat tijd vooraf om alles op te
-            bouwen en iedereen te enthousiasmeren om mee te doen 😉
-          </p>
-          <a href="">Lees verder</a>
-        </div>
-
-        <div class="news__item">
-          <img src="img/halloween.webp" alt="Halloween Blacklight Toernooi" />
+          <img src="<?php echo get_theme_file_uri('img/halloween.webp') ?>" alt="Halloween Blacklight Toernooi" />
           <h1>Tafeltennis in het donker</h1>
           <p>
             Ja tafeltennissen in het donker of wel het Halloween Blacklight
@@ -191,7 +152,7 @@
 
         <div class="row footer__links">
           <a href="https://www.e-boekhouden.nl/?c=vssp">
-            <img src="img/e-boekhouding-logo.png" alt="e-boekhouding logo" />
+            <img src="<?php echo get_theme_file_uri('img/e-boekhouding-logo.png')?>" alt="e-boekhouding logo" />
           </a>
         </div>
       </footer>
