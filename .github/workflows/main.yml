@@ -1,27 +1,30 @@
-on: push
-name: 🚀 Build Sass and deploy website on push
+oon: push
+name: 🚀 Deploy website on push
 jobs:
-  tests:
-    name: run tests
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: SFTP upload
-        uses: Dylan700/sftp-upload-action@latest
-        with:
-          server: ftp.thevictory.nl
-          username: ${{secrets.FTP_USERNAME}}
-          password: ${{secrets.FTP_PASSWORD}}
-          port: 21
-          uploads: ./ => ./httpdocs/wp-content/themes/the-victory-tafeltennis
-          ignore: |
-            *.git
-            *.github
-            *node_modules
-            *scss
-            package.json
-            package-lock.json
-            .gitignore
-            LICENSE
-            README.md
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v6
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+      with:
+        server: ftp.thevictory.nl
+        username: ${{secrets.FTP_USERNAME}}
+        password: ${{secrets.FTP_PASSWORD}}
+        port: 21
+        protocol: ftps
+        local-dir: ./
+        server-dir: ./ => ./httpdocs/wp-content/themes/the-victory-tafeltennis
+        ignore: |
+          *.git
+          *.github
+          *node_modules
+          *scss
+          package.json
+          package-lock.json
+          .gitignore
+          LICENSE
+          README.md
