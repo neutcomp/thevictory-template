@@ -68,11 +68,12 @@ a {
 }
 
 a {
-  color: #4756ca;
+  color: #e4bd0b;
 }
 
 a:hover {
-  color: #e4bd0b;
+  transition: 0.5s all;
+  color: #facd03;
 }
 
 abbr[title] {
@@ -851,18 +852,6 @@ button-yellow {
 
 .featured-instructor-teal h3 {
   color: #fec011;
-}
-
-.featured-instructor-purple {
-  background: #9d4eb6;
-}
-
-.featured-instructor-purple h3 {
-  color: #4756ca;
-}
-
-.featured-instructor .button:hover {
-  background: #4756ca;
 }
 
 /**
