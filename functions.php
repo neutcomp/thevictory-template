@@ -237,7 +237,7 @@ function save_custom_posttype(){
 add_action('save_post', 'save_custom_posttype');
 
 function modify_read_more_link() {
-    return '<a class="btn" href="'. get_permalink() .'" class="leesmeer">lees meer</a>';
+    return '<a class="button" href="'. get_permalink() .'" class="leesmeer">lees meer</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 

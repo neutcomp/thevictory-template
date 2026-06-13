@@ -10,8 +10,8 @@
                 senioren die tafeltennis spelen. Naast recreatief tafeltennis bieden wij uiteraard ook de
                 mogelijkheid
                 om competitie te spelen.</p>
-            <a class="btn" href="/algemene-informatie/openingstijden/">Openingstijden</a>
-            <a class="btn" href="/algemene-informatie/agenda/">Agenda</a>
+            <a class="button" href="/algemene-informatie/openingstijden/">Openingstijden</a>
+            <a class="button" href="/algemene-informatie/agenda/">Agenda</a>
         </div>
     </div>
     <!-- <div class="home-clinic-section">
