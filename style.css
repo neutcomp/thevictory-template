@@ -818,13 +818,14 @@ button-yellow {
   top: 0px;
   z-index: 1000;
 
-  &a {
+  &p a {
     color: black;
   }
-}
 
-.post-content p a {
-  color: black;
+  &p a:hover {
+    transition: 0.25s all;
+    color: rgb(70, 70, 70);
+  }
 }
 
 .featured-instructor:hover {
