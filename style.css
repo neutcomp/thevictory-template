@@ -388,6 +388,7 @@ p {
 }
 
 .button {
+  text-transform: uppercase;
   padding: 0.5em 2em;
   background-color: black;
   color: white;
@@ -396,24 +397,10 @@ p {
   min-width: 180px;
 
   &:hover {
-    transition-duration: 0.4s;
+    transition: 0.5s all;
     background-color: rgb(70, 70, 70);
     color: white;
   }
-}
-
-.button {
-  text-transform: uppercase;
-  border: none;
-  background: #000;
-  color: #fff;
-  padding: 0.5em 2em;
-  transition: 0.5s all;
-}
-
-.button:hover {
-  background: #000000;
-  text-decoration: none;
 }
 
 .clinic-content a,
