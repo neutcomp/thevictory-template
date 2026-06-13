@@ -411,7 +411,7 @@ a:active {
   color: #000;
 }
 
-.hero-content .btn {
+.btn {
   padding: 0.5em 2em;
   background-color: black;
   color: white;
@@ -440,7 +440,6 @@ a:active {
   text-decoration: none;
 }
 
-.hero-content a,
 .clinic-content a,
 .button a {
   color: #fff;
