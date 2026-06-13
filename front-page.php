@@ -2,7 +2,7 @@
 /* Front Page Template */
     get_header();
 ?>
-<main class="home" role="main">
+<main class="home" role="main" id="main">
     <div class="home-hero-section">
         <div class="hero-content">
             <h1>Tafeltennisvereniging The Victory</h1>

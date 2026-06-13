@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<div class="classes-wrapper">
+<div class="classes-wrapper" id="main">
    <div class="classes-entry">
      <h1>Tafeltennis spelletjes</h1>  
      <p>Hier onder vind u een lijst van heel veel verschillende tafeltennis spelletjes. Deze tafeltennis spelletjes kunt u op de camping, toernooien of op een kindertafeltennis feest uitvoeren. De tafeltennis spelletjes zijn soms voor 2 of meer spelers. Ook staat er bij elke spel hoeveel tafels er nodig zijn. De moeilijkheidsgraad bij de tafeltennis spelletjes geven aan of het voor beginners of gevorderden zijn te spelen.</p>    

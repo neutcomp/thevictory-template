@@ -4,7 +4,7 @@
 ?>
 
 
-<div class="main-content-width-wrapper">
+<div class="main-content-width-wrapper" id="main">
     <div class="two-column-entry">
         <h1><?php echo get_the_title()  ?></h1>
 
