@@ -52,7 +52,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="header">
-        <a href="#main" class="skip">Skip to main content</a>
+        <a href="#main" class="skip">Menu overslaan</a>
         <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Header menu">
             <div class=" container-fluid">
                 <a href="/" title="The Victory logo"><img

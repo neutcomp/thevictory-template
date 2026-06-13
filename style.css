@@ -371,10 +371,17 @@ code {
 .skip {
   position: absolute;
   left: -10000px;
+  z-index: 9999;
   top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
+  padding: 12px;
+  background-color: yellow;
+  color: black;
+  text-decoration: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .skip:focus {
