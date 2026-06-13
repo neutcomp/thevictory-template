@@ -817,15 +817,15 @@ button-yellow {
   left: 0px;
   top: 0px;
   z-index: 1000;
+}
 
-  &p a {
-    color: black;
-  }
+.post-content p a {
+  color: black;
+}
 
-  &p a:hover {
-    transition: 0.25s all;
-    color: rgb(70, 70, 70);
-  }
+.post-content p a:hover {
+  transition: 0.25s all;
+  color: rgb(70, 70, 70);
 }
 
 .featured-instructor:hover {
