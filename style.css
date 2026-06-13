@@ -827,10 +827,7 @@ button-yellow {
 
 .featured-instructor-yellow h2,
 .featured-instructor-yellow h3,
-.featured-instructor-yellow p,
-.featured-instructor-yellow a,
-.featured-instructor-yellow a:hover,
-.featured-instructor-yellow a:visited {
+.featured-instructor-yellow p {
   color: #0d0d0d;
 }
 
