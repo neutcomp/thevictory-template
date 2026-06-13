@@ -255,11 +255,6 @@ h4,
 h5 {
   text-transform: uppercase;
   color: #000;
-
-  &a,
-  &a:hover {
-    color: black;
-  }
 }
 
 h4,
@@ -289,6 +284,15 @@ h3 {
   line-height: 1.0909090909090908em;
   margin-top: 1.0909090909090908em;
   margin-bottom: 0em;
+}
+
+h3 a {
+  color: black;
+
+  &:hover {
+    transition: 0.5s all;
+    color: rgb(71, 71, 71);
+  }
 }
 
 h4 {
