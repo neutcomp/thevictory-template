@@ -6,24 +6,45 @@ textdomain: thevictory
 */
 
 /**
- * Color Guide *
- 
- teal -- #FEC011
- dark teal -- #027d7d
- hot pink -- #FEC011
- yellow -- #e4bd0b
- purple -- #FEC011
- green -- #4756ca
- grey -- #a5a5a5
-*/
+ * CSS Variables & Color Definitions
+ */
+:root {
+  --color-primary: #e4bd0b;
+  --color-primary-light: #fec011;
+  --color-primary-dark: #fedd35;
+  --color-secondary: #027d7d;
+  --color-accent-pink: #de3d83;
+  --color-accent-purple: #9d4eb6;
+  --color-accent-teal: #00b8b8;
+  --color-accent-green: #4756ca;
+  --color-text-dark: #0b0b0b;
+  --color-text-light: #ffffff;
+  --color-text-muted: #a5a5a5;
+  --color-border: #dadada;
+  --color-bg-dark: #222222;
+  --color-error: #ff0000;
+  --transition-default: 0.5s all;
+  --transition-short: 0.25s all;
+  --spacing-default: 1em;
+}
+
+/**
+ * Color Reference
+ * Primary: #e4bd0b (yellow)
+ * Secondary: #027d7d (dark teal)
+ * Accent Pink: #de3d83
+ * Accent Purple: #9d4eb6
+ * Accent Teal: #00b8b8
+ * Accent Green: #4756ca
+ * Grey: #a5a5a5
+ */
 
 /**
  * Normalize
  */
 html {
   font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -65,14 +86,11 @@ template {
 
 a {
   background-color: transparent;
-}
-
-a {
-  color: #e4bd0b;
+  color: var(--color-primary);
 }
 
 a:hover {
-  transition: 0.5s all;
+  transition: var(--transition-default);
   color: #facd03;
 }
 
@@ -118,8 +136,6 @@ figure {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -176,8 +192,6 @@ input::-moz-focus-inner {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-right: 0.4375em;
   padding: 0;
@@ -220,7 +234,7 @@ optgroup {
 
 p.error,
 span.error {
-  color: red;
+  color: var(--color-error);
   font-weight: bold;
 }
 
@@ -231,7 +245,7 @@ span.error {
   font-family: "Pacifico";
   font-style: normal;
   font-weight: 400;
-  src: local("Pacifico Regular"), local("Pacifico-Regular"), format("woff2");
+  src: local("Pacifico Regular"), local("Pacifico-Regular");
   font-display: swap;
 }
 
@@ -240,11 +254,10 @@ button,
 input,
 select,
 textarea {
-  color: #0b0b0b;
+  color: var(--color-text-dark);
   font-family: Raleway, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-style: normal;
   font-size: 1em;
+  font-style: normal;
   line-height: 1.5em;
 }
 
@@ -288,11 +301,11 @@ h3 {
 
 h3 a {
   color: black;
+}
 
-  &:hover {
-    transition: 0.5s all;
-    color: rgb(71, 71, 71);
-  }
+h3 a:hover {
+  transition: var(--transition-default);
+  color: rgb(71, 71, 71);
 }
 
 h4 {
@@ -442,12 +455,12 @@ p {
   border-radius: 6px;
   text-decoration: none;
   min-width: 180px;
+}
 
-  &:hover {
-    transition: 0.5s all;
-    background-color: rgb(70, 70, 70);
-    color: white;
-  }
+.button:hover {
+  transition: var(--transition-default);
+  background-color: rgb(70, 70, 70);
+  color: white;
 }
 
 .clinic-content a,
@@ -517,17 +530,17 @@ p {
 }
 
 .main-navigation a {
-  color: #a5a5a5;
+  color: var(--color-text-muted);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
   padding: 0 1em;
-  transition: 0.5s all;
+  transition: var(--transition-default);
 }
 
 .main-navigation a:hover {
-  color: #4756ca;
+  color: var(--color-accent-green);
 }
 
 #menu-icon {
@@ -553,7 +566,7 @@ p {
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: #fec011;
+  background-color: var(--color-primary-light);
 }
 
 #google_language_translator {
@@ -565,7 +578,7 @@ p {
 */
 .footer {
   padding: 1em 0 3em 0;
-  background: #222222;
+  background: var(--color-bg-dark);
   clear: both;
   min-height: 370px;
 }
@@ -581,25 +594,25 @@ p {
 }
 
 .footer-navigation a {
-  color: #ffffff;
+  color: var(--color-text-light);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   display: block;
   padding: 0 1em;
-  transition: 0.5s all;
+  transition: var(--transition-default);
 }
 
 .footer-navigation a:hover {
-  color: #e4bd0b;
+  color: var(--color-primary);
 }
 
 .footer-navigation a:active {
-  color: #fec011;
+  color: var(--color-primary-light);
 }
 
 .copyright {
-  color: #ffffff;
+  color: var(--color-text-light);
   max-width: 960px;
   margin: 4em auto;
   clear: left;
@@ -617,7 +630,7 @@ p {
  * Sidebar Styles
 */
 .sidebar {
-  background: #fec011;
+  background: var(--color-primary-light);
   float: right;
   width: 30%;
   padding: 1em;
@@ -643,32 +656,29 @@ p {
   color: #000;
 }
 
-.webp .home-hero-section {
-  background: url(images/home-hero-background.webp) no-repeat;
+.home-hero-section {
   background-size: cover;
   min-height: 550px;
 }
 
+.webp .home-hero-section {
+  background: url(images/home-hero-background.webp) no-repeat;
+}
+
 .no-webp .home-hero-section {
   background: url(images/home-hero-background.jpg) no-repeat;
-  background-size: cover;
-  min-height: 400px;
 }
 
-.webp .home-clinic-section {
-  background-color: #222222;
-}
-
-.no-webp .home-clinic-section {
-  background-color: #222222;
+.home-clinic-section {
+  background-color: var(--color-bg-dark);
 }
 
 .hero-content {
-  background: #e4bd0b;
+  background: var(--color-primary);
   float: right;
   width: 35%;
   min-width: 650px;
-  padding: 3em 3em;
+  padding: 3em;
   margin-top: 2em;
   text-align: right;
   color: #000;
@@ -682,11 +692,9 @@ p {
 }
 
 .clinic-content {
-  background: #e4bd0b;
+  background: var(--color-primary);
   padding: 1em 3em;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2em auto 0;
   text-align: left;
   color: #000;
 }
@@ -715,19 +723,19 @@ p {
 }
 
 .button-pink {
-  background: #de3d83;
+  background: var(--color-accent-pink);
 }
 
 .button-pink:hover {
   background: #ff006f;
 }
 
-button-yellow {
-  background: #e4bd0b;
+.button-yellow {
+  background: var(--color-primary);
 }
 
 .button-yellow:hover {
-  background: #fec011;
+  background: var(--color-primary-light);
 }
 
 .home-philosophy-section,
@@ -744,30 +752,14 @@ button-yellow {
   text-align: center;
 }
 
-.webp .home-philosophy-section {
-  /*background: url(images/zaal-overzicht.webp) no-repeat;*/
-  background-color: #222222;
+.home-philosophy-section {
+  background-color: var(--color-bg-dark);
   background-size: cover;
   float: left;
 }
 
-.no-webp .home-philosophy-section {
-  /*background: url(images/zaal-overzicht.jpg) no-repeat;*/
-  background-color: #222222;
-  background-size: cover;
-  float: left;
-}
-
-.webp .home-location-section {
-  /*background: url(images/clubgebouw.webp) no-repeat;*/
-  background-color: #222222;
-  background-size: cover;
-  float: right;
-}
-
-.no-webp .home-location-section {
-  /*background: url(images/clubgebouw.jpg) no-repeat;*/
-  background-color: #222222;
+.home-location-section {
+  background-color: var(--color-bg-dark);
   background-size: cover;
   float: right;
 }
@@ -801,14 +793,14 @@ button-yellow {
 }
 
 .featured-instructor {
-  color: #fff;
+  color: var(--color-text-light);
   text-align: center;
   line-height: 1.9em;
   float: left;
   margin: 0 1em 1em 1em;
   box-shadow: none;
   box-sizing: border-box;
-  transition: 0.5s all;
+  transition: var(--transition-default);
   min-height: 630px;
 }
 
@@ -824,7 +816,7 @@ button-yellow {
 }
 
 .post-content p a:hover {
-  transition: 0.25s all;
+  transition: var(--transition-short);
   color: rgb(70, 70, 70);
 }
 
@@ -837,15 +829,15 @@ button-yellow {
 }
 
 .featured-instructor-pink {
-  background: #fec011;
+  background: var(--color-primary-light);
 }
 
 .featured-instructor-pink h3 {
-  color: #fec011;
+  color: var(--color-accent-teal);
 }
 
 .featured-instructor-yellow {
-  background: #fedd35;
+  background: var(--color-primary-dark);
 }
 
 .featured-instructor-yellow img {
@@ -875,20 +867,20 @@ button-yellow {
   color: #fff;
 }
 
-.featured-instructor-pink {
-  background: #de3d83;
+.featured-instructor-pink-alt {
+  background: var(--color-accent-pink);
 }
 
-.featured-instructor-pink h3 {
-  color: #00b8b8;
+.featured-instructor-pink-alt h3 {
+  color: var(--color-accent-teal);
 }
 
 .featured-instructor-teal {
-  background: #00b8b8;
+  background: var(--color-accent-teal);
 }
 
 .featured-instructor-teal h3 {
-  color: #fec011;
+  color: var(--color-primary-light);
 }
 
 /**
@@ -918,7 +910,7 @@ button-yellow {
   border: 1px solid #dbdbdb;
   float: left;
   box-shadow: none;
-  transition: 0.25s all;
+  transition: var(--transition-short);
 }
 
 .class-container:hover {
@@ -978,47 +970,47 @@ button-yellow {
 
 .class-container-yellow h2,
 .class-container-yellow .enroll-button {
-  background-color: #fec011;
+  background-color: var(--color-primary-light);
 }
 
 .class-container-yellow h3 {
-  color: #fec011;
+  color: var(--color-primary-light);
 }
 
 .class-container-pink h2,
 .class-container-pink .enroll-button {
-  background-color: #de3d83;
+  background-color: var(--color-accent-pink);
 }
 
 .class-container-pink h3 {
-  color: #de3d83;
+  color: var(--color-accent-pink);
 }
 
 .class-container-purple h2,
 .class-container-purple .enroll-button {
-  background-color: #9d4eb6;
+  background-color: var(--color-accent-purple);
 }
 
 .class-container-purple h3 {
-  color: #9d4eb6;
+  color: var(--color-accent-purple);
 }
 
 .class-container-teal h2,
 .class-container-teal .enroll-button {
-  background-color: #027d7d;
+  background-color: var(--color-secondary);
 }
 
 .class-container-teal h3 {
-  color: #027d7d;
+  color: var(--color-secondary);
 }
 
 .class-container-green h2,
 .class-container-green .enroll-button {
-  background-color: #4756ca;
+  background-color: var(--color-accent-green);
 }
 
 .class-container-green h3 {
-  color: #4756ca;
+  color: var(--color-accent-green);
 }
 
 .thumbnail {
@@ -1134,7 +1126,7 @@ button-yellow {
     position: absolute;
     right: 31px;
     border-radius: 5px;
-    transition: 0.5s all;
+    transition: var(--transition-default);
   }
 
   .mobile-menu:hover .menu-main-navigation-container {
