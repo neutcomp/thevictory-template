@@ -855,8 +855,8 @@ button-yellow {
   color: #0d0d0d;
 }
 
-.featured-instructor-yellow button a {
-  color: #fff !important;
+.featured-instructor-yellow button {
+  color: #fff;
 }
 
 .featured-instructor-pink {
