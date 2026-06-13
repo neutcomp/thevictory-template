@@ -412,7 +412,7 @@ a:active {
   color: #000;
 }
 
-btn {
+.btn {
   padding: 0.5em 2em;
   background-color: black;
   color: white;
