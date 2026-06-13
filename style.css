@@ -412,6 +412,19 @@ a:active {
   color: #000;
 }
 
+btn {
+  padding: 0.5em 2em;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+
+  &:hover {
+    transition-duration: 0.4s;
+    background-color: rgb(70, 70, 70);
+  }
+}
+
 .button {
   text-transform: uppercase;
   border: none;
