@@ -1,0 +1,38 @@
+body {
+    background-color: #FFDF34
+}
+
+.has-x-large-font-size {
+    font-size: 4rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+thead {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+thead th {
+    border-bottom: 1px solid #000;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    font-size: 3.4rem;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.aligncenter {
+    text-align: center;
+}

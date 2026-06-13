@@ -1,173 +1,1292 @@
+/*
+Theme Name: The Victory Theme
+Author: Bjorn van der Neut
+Description:  Custom theme created for The Victory
+textdomain: thevictory
+*/
+
 /**
-  * start of _reset.scss
+ * Color Guide *
+ 
+ teal -- #FEC011
+ dark teal -- #027d7d
+ hot pink -- #FEC011
+ yellow -- #e4bd0b
+ purple -- #FEC011
+ green -- #4756ca
+ grey -- #a5a5a5
+*/
+
+/**
+ * Normalize
  */
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  line-height: 1.5;
+  margin: 0;
 }
 
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
+[hidden],
+template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+select {
+  text-transform: none;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0.4375em;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #d1d1d1;
+  margin: 0 0 1.75em;
+  min-width: inherit;
+  padding: 0.875em;
+}
+
+fieldset > :last-child {
+  margin-bottom: 0;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+p.error,
+span.error {
+  color: red;
+  font-weight: bold;
 }
 
 /**
-  * End of _reset.scss
-  */
-* {
-  border: 1px dashed red;
+ * Typography
+ */
+@font-face {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Pacifico Regular"), local("Pacifico-Regular"), format("woff2");
+  font-display: swap;
 }
 
-:root {
-  --clr-primary-100: hsl(14, 100%, 80%);
-  --clr-primary-200: hsl(14, 100%, 70%);
-  --clr-primary-300: hsl(14, 100%, 60%);
-  --clr-primary-400: hsl(14, 100%, 43%);
-  --clr-primary-500: hsl(14, 100%, 20%);
+body,
+button,
+input,
+select,
+textarea {
+  color: #0b0b0b;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
-body {
-  font-family: "Verdana";
-  font-size: 2.7rem;
-  background-color: #e4bd0b;
-}
-body h1 {
-  font-size: 2.7rem;
-}
-body p {
-  font-size: 1.8rem;
-}
-body a {
-  font-size: 1.8rem;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+  color: #000;
 }
 
-.container {
+h4,
+h5 {
+  color: #a5a5a5;
+}
+
+h1,
+.page-title {
+  font-weight: 600;
+  font-size: 2.75em;
+  line-height: 1.0909090909090908em;
+  margin-top: 0.8181818181818181em;
+  margin-bottom: 0.27272727272727em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.9375em;
+  line-height: 1.5483870967741935em;
+  margin-top: 0.7741935483870968em;
+  margin-bottom: 0.7741935483870968em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.375em;
+  line-height: 1.0909090909090908em;
+  margin-top: 1.0909090909090908em;
+  margin-bottom: 0em;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0em;
+}
+
+h6 {
+  color: #a5a5a5;
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+}
+
+blockquote {
+  font: 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
+
+.main-content-width-wrapper p {
+  font-size: 1.2em;
+  max-width: 100%;
+  line-height: 1.8;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr {
+  border: 10px solid;
+  margin: -1px 0;
+}
+
+b,
+strong,
+em,
+small,
+code {
+  line-height: 1;
+}
+
+/**
+ * Global Styles
+*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.main-content-width-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 2150px;
+  padding: 0 2em;
+  margin-top: 10px;
 }
 
-.row {
-  margin: 0;
-  display: flex;
-  gap: 2em;
+p {
+  max-width: 650px;
 }
-@media only screen and (max-width: 40em) {
-  .row {
-    display: block;
+
+a {
+  color: #4756ca;
+}
+
+a:visited {
+  color: #4756ca;
+}
+
+a:hover {
+  color: #e4bd0b;
+}
+
+a:active {
+  color: #4756ca;
+}
+
+.leesmeer {
+  text-decoration: none;
+}
+
+.home a {
+  color: #fec011;
+}
+
+.home a:visited {
+  color: #fec011;
+}
+
+.clinic-content a:visited {
+  color: #fff;
+}
+
+#main-menu a,
+#main-menu a:visited,
+#main-menu {
+  color: #000;
+}
+
+.button {
+  text-transform: uppercase;
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 0.5em 2em;
+  transition: 0.5s all;
+}
+
+.button:hover {
+  background: #ccc;
+  text-decoration: none;
+}
+
+.hero-content a,
+.clinic-content a,
+.button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactform {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contactform label {
+  width: 70px;
+}
+
+.contactform li {
+  padding-bottom: 8px;
+}
+
+.contactform textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+}
+
+.contactform .enroll-button {
+  float: left;
+}
+
+/**
+ * Header Styles
+*/
+.header {
+  background-color: #fff;
+  height: 70px;
+  z-index: 90;
+  margin: 0 auto;
+  border-bottom: 1px solid #dadada;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 125px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  display: block;
+  float: left;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.main-navigation {
+  float: right;
+  margin-top: 2em;
+}
+
+.main-navigation li {
+  list-style-type: none;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.main-navigation a {
+  color: #a5a5a5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  padding: 0 1em;
+  transition: 0.5s all;
+}
+
+.main-navigation a:hover {
+  color: #4756ca;
+}
+
+#menu-icon {
+  display: none;
+}
+
+.dropdown-menu {
+  z-index: 99;
+}
+
+.bg-light {
+  background-color: #fff !important;
+}
+
+.container-fluid {
+  width: 80%;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+  margin-top: 20px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #fec011;
+}
+
+#google_language_translator {
+  margin-top: 15px;
+}
+
+/**
+ * Footer Styles
+*/
+.footer {
+  padding: 1em 0 3em 0;
+  background: #222222;
+  clear: both;
+  min-height: 370px;
+}
+
+.footer-navigation {
+  max-width: 720px;
+  margin: 1em auto;
+}
+
+.footer-navigation li {
+  list-style-type: none;
+  float: left;
+}
+
+.footer-navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  padding: 0 1em;
+  transition: 0.5s all;
+}
+
+.footer-navigation a:hover {
+  color: #e4bd0b;
+}
+
+.footer-navigation a:active {
+  color: #fec011;
+}
+
+.copyright {
+  color: #ffffff;
+  max-width: 960px;
+  margin: 4em auto;
+  clear: left;
+  text-align: center;
+}
+
+.boekhouding {
+  max-width: 960px;
+  margin: 4em auto;
+  clear: left;
+  text-align: center;
+}
+
+/**
+ * Sidebar Styles
+*/
+.sidebar {
+  background: #fec011;
+  float: right;
+  width: 30%;
+  padding: 1em;
+}
+
+.sidebar .widget-title,
+.sidebar .widget_text {
+  color: #000;
+}
+
+.sidebar a,
+.sidebar h1,
+.sidebar h2 {
+  color: #000;
+}
+
+/**
+* Front-Page/Home Template
+*/
+.home h1,
+.home h2,
+.home h3 {
+  color: #000;
+}
+
+.webp .home-hero-section {
+  background: url(images/home-hero-background.webp) no-repeat;
+  background-size: cover;
+  min-height: 550px;
+}
+
+.no-webp .home-hero-section {
+  background: url(images/home-hero-background.jpg) no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.webp .home-clinic-section {
+  background-color: #222222;
+}
+
+.no-webp .home-clinic-section {
+  background-color: #222222;
+}
+
+.hero-content {
+  background: #e4bd0b;
+  float: right;
+  width: 35%;
+  min-width: 650px;
+  padding: 0 3em;
+  margin-top: 2em;
+  text-align: right;
+  color: #000;
+}
+
+.hero-content p {
+  font-size: 1.375em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 1.0909090909090908em;
+}
+
+.clinic-content {
+  background: #e4bd0b;
+  padding: 1em 3em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  color: #000;
+}
+
+.clinic-content p {
+  font-size: 1.375em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 1.0909090909090908em;
+}
+
+.button-home {
+  display: block;
+  width: 300px;
+  padding: 1em 0;
+  margin-bottom: 1em;
+  float: right;
+}
+
+.button-purple {
+  background: #9d4eb6;
+}
+
+.button-purple:hover {
+  background: #c100ff;
+}
+
+.button-pink {
+  background: #de3d83;
+}
+
+.button-pink:hover {
+  background: #ff006f;
+}
+
+button-yellow {
+  background: #e4bd0b;
+}
+
+.button-yellow:hover {
+  background: #fec011;
+}
+
+.home-philosophy-section,
+.home-location-section {
+  box-sizing: border-box;
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #fff;
+  width: 49%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1.5em;
+  height: 400px;
+  text-align: center;
+}
+
+.webp .home-philosophy-section {
+  /*background: url(images/zaal-overzicht.webp) no-repeat;*/
+  background-color: #222222;
+  background-size: cover;
+  float: left;
+}
+
+.no-webp .home-philosophy-section {
+  /*background: url(images/zaal-overzicht.jpg) no-repeat;*/
+  background-color: #222222;
+  background-size: cover;
+  float: left;
+}
+
+.webp .home-location-section {
+  /*background: url(images/clubgebouw.webp) no-repeat;*/
+  background-color: #222222;
+  background-size: cover;
+  float: right;
+}
+
+.no-webp .home-location-section {
+  /*background: url(images/clubgebouw.jpg) no-repeat;*/
+  background-color: #222222;
+  background-size: cover;
+  float: right;
+}
+
+.home-location-section p,
+.home-philosophy-section p {
+  max-width: none;
+}
+
+.home-location-section h2,
+.home-philosophy-section h2 {
+  color: #fff;
+}
+
+.featured-instructors-width-wrapper {
+  margin: 30px auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 33% 33% 33%;
+  position: relative;
+}
+
+.home-featured-instructors-section {
+  display: flex;
+  width: 100%;
+}
+
+.home-featured-instructors-section h2 {
+  text-align: center;
+  padding-top: 1.5em;
+}
+
+.featured-instructor {
+  color: #fff;
+  text-align: center;
+  line-height: 1.9em;
+  float: left;
+  margin: 0 1em 1em 1em;
+  box-shadow: none;
+  box-sizing: border-box;
+  transition: 0.5s all;
+  min-height: 630px;
+}
+
+.post-content {
+  padding: 5px;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+}
+
+.featured-instructor:hover {
+  box-shadow: 0 0 20px 2px #0d0d0d;
+}
+
+.featured-instructor h3 {
+  margin-bottom: 0.5em;
+}
+
+.featured-instructor-pink {
+  background: #fec011;
+}
+
+.featured-instructor-pink h3 {
+  color: #fec011;
+}
+
+.featured-instructor-yellow {
+  background: #fedd35;
+}
+
+.featured-instructor-yellow img {
+  position: relative;
+}
+
+.featured-instructor-yellow li {
+  color: #000;
+  text-align: left;
+}
+
+.featured-instructor-grey {
+  background: #ccc;
+}
+
+.featured-instructor-black {
+  background: #000;
+}
+
+.featured-instructor-yellow h2,
+.featured-instructor-yellow h3,
+.featured-instructor-yellow p,
+.featured-instructor-yellow a,
+.featured-instructor-yellow a:hover,
+.featured-instructor-yellow a:visited {
+  color: #0d0d0d;
+}
+
+.featured-instructor-yellow button a {
+  color: #fff !important;
+}
+
+.featured-instructor-pink {
+  background: #de3d83;
+}
+
+.featured-instructor-pink h3 {
+  color: #00b8b8;
+}
+
+.featured-instructor-teal {
+  background: #00b8b8;
+}
+
+.featured-instructor-teal h3 {
+  color: #fec011;
+}
+
+.featured-instructor-purple {
+  background: #9d4eb6;
+}
+
+.featured-instructor-purple h3 {
+  color: #4756ca;
+}
+
+.featured-instructor .button:hover {
+  background: #4756ca;
+}
+
+/**
+*  Classes Template
+*/
+.classes-wrapper {
+  padding: 1em;
+  min-height: 600px;
+}
+
+.class-container h2 {
+  color: #fff;
+}
+
+.classes-entry p {
+  color: #fff;
+  color: #151515;
+  font-weight: 300;
+}
+
+.class-container {
+  background: #fff;
+  width: 45%;
+  min-height: 740px;
+  max-width: 560px;
+  margin: 1em 2em 1em 0;
+  border: 1px solid #dbdbdb;
+  float: left;
+  box-shadow: none;
+  transition: 0.25s all;
+}
+
+.class-container:hover {
+  box-shadow: 0 0 15px 1px #c1c1c1;
+}
+
+.class-container-content {
+  padding: 0 2em 2em 2em;
+}
+
+.class-container h2 {
+  font-size: 1.375em;
+  font-weight: 300;
+  line-height: 1.0909090909090908em;
+  padding: 0.5em;
+  margin-top: 0;
+}
+
+.class-skill-section,
+.class-length-section,
+.class-instructor-section {
+  float: left;
+}
+
+.instructor-name,
+.skill-level,
+.length {
+  color: #a5a5a5;
+}
+
+.instructor-headshot {
+  display: block;
+  margin: 0.5em auto;
+  max-width: 120px;
+}
+
+.class-skill-level .skill-level {
+  margin: 0.5em 0;
+}
+
+.class-skill-section {
+  margin-left: 4em;
+}
+
+.class-description {
+  clear: both;
+}
+
+.enroll-button {
+  display: block;
+  margin: 0 auto;
+}
+
+.class-container .enroll-button:hover {
+  background-color: #00b8b8;
+}
+
+.class-container-yellow h2,
+.class-container-yellow .enroll-button {
+  background-color: #fec011;
+}
+
+.class-container-yellow h3 {
+  color: #fec011;
+}
+
+.class-container-pink h2,
+.class-container-pink .enroll-button {
+  background-color: #de3d83;
+}
+
+.class-container-pink h3 {
+  color: #de3d83;
+}
+
+.class-container-purple h2,
+.class-container-purple .enroll-button {
+  background-color: #9d4eb6;
+}
+
+.class-container-purple h3 {
+  color: #9d4eb6;
+}
+
+.class-container-teal h2,
+.class-container-teal .enroll-button {
+  background-color: #027d7d;
+}
+
+.class-container-teal h3 {
+  color: #027d7d;
+}
+
+.class-container-green h2,
+.class-container-green .enroll-button {
+  background-color: #4756ca;
+}
+
+.class-container-green h3 {
+  color: #4756ca;
+}
+
+.thumbnail {
+  width: 100%;
+}
+
+/**
+* Two Column Template
+*/
+.two-column-entry {
+  float: left;
+  width: 55%;
+  margin-right: 1em;
+}
+
+/**
+* Breadcrumb
+*/
+#ah-breadcrumb {
+  list-style: none;
+  overflow: hidden;
+}
+
+#ah-breadcrumb li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+#ah-breadcrumb .separator {
+  font-size: 18px;
+  font-weight: 100;
+  color: #ccc;
+}
+
+.nav-bottom {
+  background-color: #fedd35;
+  float: left;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+.nav-bottom p {
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.nav-bottom a {
+  color: #0d0d0d !important;
+}
+
+/**
+* Responsive Styles
+*/
+@media screen and (max-width: 1122px) {
+  /* Header */
+
+  .logo {
+    width: 150px;
+    margin-left: 0;
+    height: auto;
+  }
+
+  .main-navigation {
+    padding-left: 0;
+    font-size: 0.9em;
+  }
+
+  /* Home Page */
+  .hero-content {
+    background: #e4bd0b;
+  }
+
+  .clinic-content {
+    background: #e4bd0b;
+  }
+
+  .home-philosophy-section,
+  .home-location-section {
+    height: 500px;
   }
 }
 
-.nav {
-  color: var(--clr-primary-500);
-}
-.nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.hero {
-  display: flex;
-  min-height: 611px;
-  align-items: center;
-  background-image: url("./img/hero-background.webp");
+@media screen and (max-width: 900px) {
+  /* Header */
+  .logo {
+    margin-left: 0;
+    width: 125px;
+    height: auto;
+  }
 }
 
-.info {
-  max-width: 45%;
-  text-align: center;
-  padding: 0.7em;
-  justify-content: left;
-}
-.info__black {
-  background-color: #000;
-  color: white;
-}
-.info__yellow {
-  background-color: #e4bd0b;
+@media screen and (max-width: 875px) {
+  /* Main Navigation */
+  #menu-icon {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #fec011;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #808080;
+  }
+
+  .mobile-menu {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 31px;
+    border-radius: 5px;
+    transition: 0.5s all;
+  }
+
+  .mobile-menu:hover .menu-main-navigation-container {
+    cursor: pointer;
+    height: 42px;
+  }
+
+  .main-navigation,
+  .main-navigation:active {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: #fff;
+    border: 5px solid #444;
+    right: 0px;
+    top: 15px;
+    width: 250px;
+    border-radius: 4px 0 4px 4px;
+  }
+
+  .main-navigation {
+    padding: 0;
+  }
+
+  .main-navigation li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .main-navigation li:hover {
+    background-color: #ededed;
+  }
+
+  .mobile-menu:hover .main-navigation {
+    display: block;
+  }
+
+  /* Home Page */
+  .hero-content {
+    margin-top: 2em;
+  }
+
+  .clinic-content {
+    margin-top: 2em;
+  }
+
+  .thumbnail img {
+    max-width: 255px;
+  }
 }
 
-.news {
-  display: grid;
-  grid-template-columns: 23.4em 23.4em;
-  margin-top: 1em;
-  grid-gap: 1em;
-}
-.news__item {
-  background-color: #446;
-  color: white;
-  border-radius: 5px;
-  padding: 20px;
+@media screen and (max-width: 745px) {
+  /* Header */
+  .logo {
+    margin-top: 0;
+  }
+
+  .class-container {
+    min-width: 100%;
+  }
+
+  .clinic-content {
+    width: 100%;
+  }
 }
 
-.footer {
-  margin-top: 1em;
-}
-.footer__links {
-  justify-content: center;
+@media screen and (max-width: 675px) {
+  /* Home Page */
+  .hero-content {
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+    float: none;
+  }
+
+  .clinic-content {
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em;
+    float: none;
+  }
+
+  .button-home {
+    float: none;
+    margin: 1em auto;
+  }
+
+  .home-philosophy-section,
+  .home-location-section {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-navigation {
+    padding: 0;
+  }
+
+  .footer-navigation li {
+    width: 100%;
+    float: none;
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .class-container {
+    min-width: 100%;
+  }
+
+  /* Home Page */
+  .featured-instructors-width-wrapper {
+    grid-template-columns: 50% 50%;
+  }
 }
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 430px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .hero-content {
+    min-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 18px;
+  }
+
+  .clinic-content {
+    min-width: 100%;
+  }
+
+  .clinic-content h2 {
+    font-size: 18px;
+  }
+
+  .header {
+    min-width: 300px;
+    min-height: 80px;
+  }
+
+  .class-container {
+    min-width: 100%;
+  }
+
+  .class-skill-section {
+    margin-left: 0;
+  }
+
+  .class-container-content {
+    padding: 0 6px 0 6px;
+  }
+
+  /* Home Page */
+  .featured-instructors-width-wrapper {
+    grid-template-columns: 100%;
+  }
+
+  #ah-breadcrumb {
+    padding-top: 10px;
+  }
+}

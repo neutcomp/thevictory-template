@@ -1,25 +1,27 @@
-		<div class="container">
-      <footer class="footer">
-        <div class="row footer__links">
-          <a href="/algemene-informatie/veilig-sportklimaat/"
-            >Veilig sportklimaat</a
-          >
-          <a href="/algemene-informatie/privacyverklaring/"
-            >Privacyverklaring</a
-          >
-          <a href="/algemene-informatie/contactformulier/">Contact formulier</a>
-        </div>
+<?php
+/* Main Footer Template */
 
-        <div class="row footer__links">
-          <p>The Victory © 's Gravelandseweg 3a, 1381 HH Weesp</p>
-        </div>
+?>
+<footer class="footer" id="footer" role="contentinfo">
+    <nav role="navigation" aria-label="Footer menu">
+        <?php
+                wp_nav_menu( $arg = array (
+                    'menu_class' => 'footer-navigation',
+                    'theme_location' => 'footer-menu'
+                ));
+            ?>
+    </nav>
+    <p class="copyright">
+        <small>The Victory &copy; 's Gravelandseweg 3a, 1381 HH Weesp</small>
+    </p>
+    <p class="boekhouding">
+        <a href="https://www.e-boekhouden.nl/?c=vssp" title="e-Boekhouden.nl" target="blank">
+            <img src="https://cdn.e-boekhouden.nl/img/sponsor/nl/180x90px.png" alt="e-Boekhouden.nl">
+        </a>
+    </p>
+</footer>
+<?php wp_footer(); ?>
 
-        <div class="row footer__links">
-          <a href="https://www.e-boekhouden.nl/?c=vssp">
-            <img src="<?php echo get_theme_file_uri('img/e-boekhouding-logo.png'); ?>" alt="e-boekhouding logo" />
-          </a>
-        </div>
-      </footer>
-    </div>
-  </body>
+</body>
+
 </html>
