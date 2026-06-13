@@ -387,6 +387,12 @@ p {
   color: #000;
 }
 
+.call-to-action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+}
+
 .button {
   text-transform: uppercase;
   padding: 0.5em 2em;
