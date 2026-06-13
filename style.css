@@ -393,14 +393,6 @@ a:active {
   text-decoration: none;
 }
 
-.home a {
-  color: #fec011;
-}
-
-.home a:visited {
-  color: #fec011;
-}
-
 .clinic-content a:visited {
   color: #fff;
 }
