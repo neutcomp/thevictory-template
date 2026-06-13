@@ -418,10 +418,12 @@ a:active {
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  min-width: 180px;
 
   &:hover {
     transition-duration: 0.4s;
     background-color: rgb(70, 70, 70);
+    color: white;
   }
 }
 
