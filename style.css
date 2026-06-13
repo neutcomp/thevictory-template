@@ -71,10 +71,6 @@ a {
   color: #e4bd0b;
 }
 
-h3.a {
-  color: black;
-}
-
 a:hover {
   transition: 0.5s all;
   color: #facd03;
@@ -259,6 +255,11 @@ h4,
 h5 {
   text-transform: uppercase;
   color: #000;
+
+  &a,
+  &a:hover {
+    color: black;
+  }
 }
 
 h4,
