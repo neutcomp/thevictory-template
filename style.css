@@ -823,6 +823,10 @@ button-yellow {
   }
 }
 
+.wp-block-paragraph a {
+  color: black;
+}
+
 .featured-instructor:hover {
   box-shadow: 0 0 20px 2px #0d0d0d;
 }
