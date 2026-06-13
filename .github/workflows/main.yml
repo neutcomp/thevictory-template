@@ -16,11 +16,11 @@ jobs:
       - name: SFTP upload
         uses: Dylan700/sftp-upload-action@latest
         with:
-          server: ssh.strato.com
+          server: ftp.thevictory.nl
           username: ${{secrets.FTP_USERNAME}}
           password: ${{secrets.FTP_PASSWORD}}
           port: 22
-          uploads: ./ => ./the-victory-template/
+          uploads: ./ => ./httpdocs/wp-content/themes/the-victory-tafeltennis
           ignore: |
             *.git
             *.github
