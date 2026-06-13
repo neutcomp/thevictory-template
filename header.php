@@ -2,7 +2,7 @@
  /*  Main Header Template */
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <link rel=preload>
