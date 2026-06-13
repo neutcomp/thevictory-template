@@ -71,16 +71,8 @@ a {
   color: #4756ca;
 }
 
-a:visited {
-  color: #4756ca;
-}
-
 a:hover {
   color: #e4bd0b;
-}
-
-a:active {
-  color: #4756ca;
 }
 
 abbr[title] {
