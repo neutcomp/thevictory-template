@@ -19,7 +19,7 @@ jobs:
         protocol: ftps
         local-dir: ./
         server-dir: ./httpdocs/wp-content/themes/the-victory-tafeltennis/
-        ignore: |
+        exclude: |
           *.git
           *.github
           *node_modules
