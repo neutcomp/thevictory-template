@@ -55,8 +55,7 @@
                         ?>
                 <div class="post-images">
                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="100%" height="100%"
-                            alt="<?php echo $alt; ?>" role="presentation">
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="100%" height="100%" alt="<?php echo $alt; ?>">
                     </a>
                 </div>
                 <?php endif; ?>
