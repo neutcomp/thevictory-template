@@ -11,8 +11,8 @@
                 mogelijkheid
                 om competitie te spelen.</p>
             <div class="call-to-action">
-                <a class="button" href="/algemene-informatie/openingstijden/">Openingstijden</a>
-                <a class="button" href="/algemene-informatie/agenda/">Agenda</a>
+                <a class="button" href="/algemene-informatie/openingstijden/" aria-label="Lees meer over openingstijden">Openingstijden</a>
+                <a class="button" href="/algemene-informatie/agenda/" aria-label="Lees meer over agenda">Agenda</a>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
         <h2>Kijkje nemen?</h2>
         <p>Interesse om eens een balletje te komen slaan of een proefles te volgen? Neem dan even contact met ons op
             zodat we je goed kunnen opvangen.</a></p>
-        <p><a href="mailto:info@thevictory.nl">via email</a><br>of <a href="/the-victory/proefles/">het
+        <p><a href="mailto:info@thevictory.nl" aria-label="Stuur ons een email">via email</a><br>of <a href="/the-victory/proefles/" aria-label="Lees meer over contactformulier">het
                 contactformulier</a></p>
     </div>
     <div class="home-location-section">
@@ -34,7 +34,7 @@
         <p>'s Gravelandseweg 3a
             <br> 1381 HH Weesp
             <br> T: 0294-417637
-            <br> E: <a href="mailto:info@thevictory.nl">info@thevictory.nl</a>
+            <br> E: <a href="mailto:info@thevictory.nl" aria-label="Stuur ons een email">info@thevictory.nl</a>
         </p>
     </div>
 
@@ -56,13 +56,13 @@
                 <div class="post-images">
                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                         <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="100%" height="100%"
-                            alt="<?php echo $alt; ?>">
+                            alt="<?php echo $alt; ?>" role="presentation">
                     </a>
                 </div>
                 <?php endif; ?>
                 <div class="post-content">
                     <h3><a href="<?php the_permalink(); ?>" rel="bookmark"
-                            title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+                            title="Permanent Link to <?php the_title_attribute(); ?>" aria-label="Lees meer over <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
                     <p>
                         <?php the_content(); ?>
