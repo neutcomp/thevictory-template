@@ -15,6 +15,7 @@ jobs:
         username: ${{secrets.FTP_USERNAME}}
         password: ${{secrets.FTP_PASSWORD}}
         port: 21
+        timeout: 60000
         protocol: ftps
         local-dir: ./
         server-dir: ./httpdocs/wp-content/themes/the-victory-tafeltennis/
