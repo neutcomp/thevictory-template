@@ -9,7 +9,7 @@ textdomain: thevictory
  * CSS Variables & Color Definitions
  */
 :root {
-  --color-primary: #8b6f00;
+  --color-primary: #ffbb02;
   --color-primary-light: #fec011;
   --color-primary-dark: #fedd35;
   --color-secondary: #027d7d;
@@ -30,7 +30,7 @@ textdomain: thevictory
 
 /**
  * Color Reference
- * Primary: #e4bd0b (yellow)
+ * Primary: #8b6f00 (gold)
  * Secondary: #027d7d (dark teal)
  * Accent Pink: #de3d83
  * Accent Purple: #9d4eb6
@@ -133,10 +133,6 @@ svg:not(:root) {
 
 figure {
   margin: 0;
-}
-
-hr {
-  box-sizing: content-box;
 }
 
 code,
@@ -300,12 +296,12 @@ h3 {
 }
 
 h3 a {
-  color: black;
+  color: var(--color-text-dark);
 }
 
 h3 a:hover {
   transition: var(--transition-default);
-  color: rgb(71, 71, 71);
+  color: var(--color-text-muted);
 }
 
 h4 {
@@ -369,8 +365,10 @@ ol ul {
 }
 
 hr {
-  border: 10px solid;
-  margin: -1px 0;
+  box-sizing: content-box;
+  border: 0;
+  border-top: 2px solid var(--color-border);
+  margin: 1.5em 0;
 }
 
 b,
@@ -390,8 +388,8 @@ code {
   height: 1px;
   overflow: hidden;
   padding: 12px;
-  background-color: yellow;
-  color: black;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-dark);
   text-decoration: none;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -421,14 +419,10 @@ p {
   text-decoration: none;
 }
 
-.clinic-content a:visited {
-  color: #fff;
-}
-
 #main-menu a,
 #main-menu a:visited,
 #main-menu {
-  color: #000;
+  color: var(--color-text-dark);
 }
 
 .call-to-action {
@@ -441,8 +435,8 @@ p {
   text-transform: uppercase;
   text-align: center;
   padding: 0.5em 2em;
-  background-color: black;
-  color: white;
+  background-color: var(--color-text-dark);
+  color: var(--color-text-light);
   border-radius: 6px;
   text-decoration: none;
   min-width: 180px;
@@ -450,13 +444,13 @@ p {
 
 .button:hover {
   transition: var(--transition-default);
-  background-color: rgb(70, 70, 70);
-  color: white;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
 }
 
 .clinic-content a,
 .button a {
-  color: #fff;
+  color: var(--color-text-light);
   text-decoration: none;
 }
 
@@ -487,7 +481,7 @@ p {
  * Header Styles
 */
 .header {
-  background-color: #fff;
+  background-color: var(--color-text-light);
   height: 70px;
   z-index: 90;
   margin: 0 auto;
@@ -543,7 +537,7 @@ p {
 }
 
 .bg-light {
-  background-color: #fff !important;
+  background-color: var(--color-text-light) !important;
 }
 
 .container-fluid {
@@ -702,7 +696,7 @@ p {
   box-sizing: border-box;
   font-size: 1.2em;
   line-height: 1.8;
-  color: #fff;
+  color: var(--color-text-light);
   width: 49%;
   margin-top: 1em;
   margin-bottom: 1em;
@@ -730,7 +724,7 @@ p {
 
 .home-location-section h2,
 .home-philosophy-section h2 {
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .featured-instructors-width-wrapper {
@@ -771,12 +765,12 @@ p {
 }
 
 .post-content p a {
-  color: black;
+  color: var(--color-text-dark);
 }
 
 .post-content p a:hover {
   transition: var(--transition-short);
-  color: rgb(70, 70, 70);
+  color: var(--color-text-muted);
 }
 
 .featured-instructor:hover {
@@ -796,7 +790,7 @@ p {
 }
 
 .featured-instructor-yellow li {
-  color: #000;
+  color: var(--color-text-dark);
   text-align: left;
 }
 
@@ -807,7 +801,7 @@ p {
 }
 
 .featured-instructor-yellow button {
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 /**
@@ -819,11 +813,10 @@ p {
 }
 
 .class-container h2 {
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .classes-entry p {
-  color: #fff;
   color: #151515;
   font-weight: 300;
 }
