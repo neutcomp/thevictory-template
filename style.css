@@ -9,7 +9,7 @@ textdomain: thevictory
  * CSS Variables & Color Definitions
  */
 :root {
-  --color-primary: #e4bd0b;
+  --color-primary: #8b6f00;
   --color-primary-light: #fec011;
   --color-primary-dark: #fedd35;
   --color-secondary: #027d7d;
@@ -17,9 +17,9 @@ textdomain: thevictory
   --color-accent-purple: #9d4eb6;
   --color-accent-teal: #00b8b8;
   --color-accent-green: #4756ca;
-  --color-text-dark: #0b0b0b;
+  --color-text-dark: #000000;
   --color-text-light: #ffffff;
-  --color-text-muted: #a5a5a5;
+  --color-text-muted: #707070;
   --color-border: #dadada;
   --color-bg-dark: #222222;
   --color-error: #ff0000;
@@ -91,7 +91,7 @@ a {
 
 a:hover {
   transition: var(--transition-default);
-  color: #facd03;
+  color: var(--color-secondary);
 }
 
 abbr[title] {
@@ -267,12 +267,12 @@ h3,
 h4,
 h5 {
   text-transform: uppercase;
-  color: #000;
+  color: var(--color-text-dark);
 }
 
 h4,
 h5 {
-  color: #a5a5a5;
+  color: var(--color-text-muted);
 }
 
 h1,
@@ -325,7 +325,7 @@ h5 {
 }
 
 h6 {
-  color: #a5a5a5;
+  color: var(--color-text-muted);
   font-weight: 300;
   font-size: 0.8em;
   line-height: 1.5em;
@@ -351,7 +351,7 @@ blockquote {
   margin-bottom: 10px;
   margin-left: 50px;
   padding-left: 15px;
-  border-left: 3px solid #ccc;
+  border-left: 3px solid var(--color-border);
 }
 
 .main-content-width-wrapper p {
@@ -864,7 +864,7 @@ p {
 
 .instructor-name,
 .skill-level {
-  color: #a5a5a5;
+  color: var(--color-text-muted);
 }
 
 .class-skill-level .skill-level {
@@ -945,7 +945,7 @@ p {
 #ah-breadcrumb .separator {
   font-size: 18px;
   font-weight: 100;
-  color: #ccc;
+  color: var(--color-border);
 }
 
 .nav-bottom {
@@ -1015,7 +1015,7 @@ p {
     right: 30px;
     padding: 0.5em 1em;
     text-decoration: none;
-    color: #fec011;
+    color: var(--color-primary);
     border-radius: 5px;
     width: 40px;
     height: 40px;
