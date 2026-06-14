@@ -89,9 +89,19 @@ a {
   color: var(--color-primary);
 }
 
-a:hover {
+a:hover,
+a:focus {
   transition: var(--transition-default);
   color: var(--color-secondary);
+}
+
+/* Improved Keyboard Focus Visibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--color-accent-teal);
+  outline-offset: 2px;
 }
 
 abbr[title] {
@@ -381,24 +391,21 @@ code {
 
 .skip {
   position: absolute;
-  left: -10000px;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9999;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
   padding: 12px;
   background-color: var(--color-primary-dark);
   color: var(--color-text-dark);
   text-decoration: none;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  transition: top 0.3s ease;
 }
 
 .skip:focus {
-  position: static;
-  width: auto;
-  height: auto;
+  top: 0;
 }
 
 /**
@@ -1028,7 +1035,9 @@ p {
     border-radius: 4px 0 4px 4px;
   }
 
-  .main-navigation {
+  /* Navigation should be hidden by default on mobile and toggled via JS */
+  .main-navigation,
+  .main-navigation.is-active {
     padding: 0;
   }
 
@@ -1041,10 +1050,6 @@ p {
 
   .main-navigation li:hover {
     background-color: #ededed;
-  }
-
-  .mobile-menu:hover .main-navigation {
-    display: block;
   }
 
   /* Home Page */
