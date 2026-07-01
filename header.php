@@ -50,7 +50,7 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4BBLC" height="0" width="0"
                 style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <div class="u-container">
+        <div class="uu-container">
             <header class="header">
                 <a href="#main" class="skip">Menu overslaan</a>
                 <nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Header menu">
