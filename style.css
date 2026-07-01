@@ -284,14 +284,14 @@ h5 {
 h1,
 .page-title {
 	font-weight: 600;
-	font-size: var(--step-5);
+	font-size: var(--step-3);
 	line-height: 1.0909090909090908em;
 	margin-bottom: 0.27272727272727em;
 }
 
 h2 {
 	font-weight: 600;
-	font-size: var(--step-4);
+	font-size: var(--step-2);
 	line-height: 1.5483870967741935em;
 	margin-top: 0.7741935483870968em;
 	margin-bottom: 0.7741935483870968em;
@@ -299,7 +299,7 @@ h2 {
 
 h3 {
 	font-weight: 600;
-	font-size: var(--step-3);
+	font-size: var(--step-1);
 	line-height: 1.0909090909090908em;
 	margin-top: 1.0909090909090908em;
 	margin-bottom: 0em;
@@ -677,7 +677,7 @@ p {
 }
 
 .hero-content p {
-	font-size: var(--step-3);
+	font-size: var(--step-1);
 	font-weight: 300;
 	line-height: 1.5;
 	margin-top: 1.0909090909090908em;
@@ -701,7 +701,7 @@ p {
 .home-philosophy-section,
 .home-location-section {
 	box-sizing: border-box;
-	font-size: var(--step-2);
+	font-size: var(--step-1);
 	line-height: 1.8;
 	color: var(--color-text-light);
 	width: 49%;
