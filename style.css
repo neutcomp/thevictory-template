@@ -566,13 +566,14 @@ p {
 }
 
 /**
- * Footer Styles
-*/
-.footer {
-  padding: 1em 0 3em 0;
-  background: var(--color-bg-dark);
-  clear: both;
-  min-height: 370px;
+	 * Footer Styles
+	 */
+	.footer {
+	font-size: var(--step--1);
+	padding: 1em 0 3em 0;
+	background: var(--color-bg-dark);
+	clear: both;
+	min-height: 370px;
 }
 
 .footer-navigation {
