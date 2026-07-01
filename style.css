@@ -114,15 +114,15 @@ strong {
 }
 
 small {
-  font-size: 80%;
+	font-size: var(--step--1);
 }
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: var(--step--2);
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sup {
@@ -149,7 +149,7 @@ code,
 kbd,
 pre,
 samp {
-  font-size: 1em;
+	font-size: var(--step-0);
 }
 
 button,
@@ -260,11 +260,11 @@ button,
 input,
 select,
 textarea {
-  color: var(--color-text-dark);
-  font-family: Raleway, Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-style: normal;
-  line-height: 1.5em;
+	color: var(--color-text-dark);
+	font-family: Raleway, Helvetica, Arial, sans-serif;
+	font-size: var(--step-0);
+	font-style: normal;
+	line-height: 1.5em;
 }
 
 h1,
@@ -283,26 +283,26 @@ h5 {
 
 h1,
 .page-title {
-  font-weight: 600;
-  font-size: 2.75em;
-  line-height: 1.0909090909090908em;
-  margin-bottom: 0.27272727272727em;
+	font-weight: 600;
+	font-size: var(--step-5);
+	line-height: 1.0909090909090908em;
+	margin-bottom: 0.27272727272727em;
 }
 
 h2 {
-  font-weight: 600;
-  font-size: 1.9375em;
-  line-height: 1.5483870967741935em;
-  margin-top: 0.7741935483870968em;
-  margin-bottom: 0.7741935483870968em;
+	font-weight: 600;
+	font-size: var(--step-4);
+	line-height: 1.5483870967741935em;
+	margin-top: 0.7741935483870968em;
+	margin-bottom: 0.7741935483870968em;
 }
 
 h3 {
-  font-weight: 600;
-  font-size: 1.375em;
-  line-height: 1.0909090909090908em;
-  margin-top: 1.0909090909090908em;
-  margin-bottom: 0em;
+	font-weight: 600;
+	font-size: var(--step-3);
+	line-height: 1.0909090909090908em;
+	margin-top: 1.0909090909090908em;
+	margin-bottom: 0em;
 }
 
 h3 a {
@@ -315,28 +315,28 @@ h3 a:hover {
 }
 
 h4 {
-  font-weight: 600;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-top: 1.5em;
-  margin-bottom: 0em;
+	font-weight: 600;
+	font-size: var(--step-2);
+	line-height: 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 0em;
 }
 
 h5 {
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-top: 1.5em;
-  margin-bottom: 0em;
+	font-weight: 400;
+	font-size: var(--step-1);
+	line-height: 1.5em;
+	margin-top: 1.5em;
+	margin-bottom: 0em;
 }
 
 h6 {
-  color: var(--color-text-muted);
-  font-weight: 300;
-  font-size: 0.8em;
-  line-height: 1.5em;
-  margin-top: 0.8em;
-  margin-bottom: 0;
+	color: var(--color-text-muted);
+	font-weight: 300;
+	font-size: var(--step--1);
+	line-height: 1.5em;
+	margin-top: 0.8em;
+	margin-bottom: 0;
 }
 
 p,
@@ -361,9 +361,9 @@ blockquote {
 }
 
 .main-content-width-wrapper p {
-  font-size: 1.2em;
-  max-width: 100%;
-  line-height: 1.8;
+	font-size: var(--step-1);
+	max-width: 100%;
+	line-height: 1.8;
 }
 
 ul ul,
@@ -677,10 +677,10 @@ p {
 }
 
 .hero-content p {
-  font-size: 1.375em;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-top: 1.0909090909090908em;
+	font-size: var(--step-3);
+	font-weight: 300;
+	line-height: 1.5;
+	margin-top: 1.0909090909090908em;
 }
 
 .clinic-content {
@@ -692,24 +692,24 @@ p {
 }
 
 .clinic-content p {
-  font-size: 1.375em;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-top: 1.0909090909090908em;
+	font-size: var(--step-3);
+	font-weight: 300;
+	line-height: 1.5;
+	margin-top: 1.0909090909090908em;
 }
 
 .home-philosophy-section,
 .home-location-section {
-  box-sizing: border-box;
-  font-size: 1.2em;
-  line-height: 1.8;
-  color: var(--color-text-light);
-  width: 49%;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding: 1.5em;
-  height: 400px;
-  text-align: center;
+	box-sizing: border-box;
+	font-size: var(--step-2);
+	line-height: 1.8;
+	color: var(--color-text-light);
+	width: 49%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1.5em;
+	height: 400px;
+	text-align: center;
 }
 
 .home-philosophy-section {
@@ -849,11 +849,11 @@ p {
 }
 
 .class-container h2 {
-  font-size: 1.375em;
-  font-weight: 300;
-  line-height: 1.0909090909090908em;
-  padding: 0.5em;
-  margin-top: 0;
+	font-size: var(--step-3);
+	font-weight: 300;
+	line-height: 1.0909090909090908em;
+	padding: 0.5em;
+	margin-top: 0;
 }
 
 .class-skill-section,
@@ -943,9 +943,9 @@ p {
 }
 
 #ah-breadcrumb .separator {
-  font-size: 18px;
-  font-weight: 100;
-  color: var(--color-border);
+	font-size: var(--step-2);
+	font-weight: 100;
+	color: var(--color-border);
 }
 
 .nav-bottom {
@@ -979,9 +979,9 @@ p {
   }
 
   .main-navigation {
-    padding-left: 0;
-    font-size: 0.9em;
-  }
+			padding-left: 0;
+			font-size: var(--step--1);
+		}
 
   /* Home Page */
   .hero-content {
@@ -1136,49 +1136,49 @@ p {
 }
 
 @media screen and (max-width: 430px) {
-  h1 {
+  /* h1 {
     font-size: 24px;
-  }
+  } */
 
-  .hero-content {
-    min-width: 100%;
-  }
+				.hero-content {
+				min-width: 100%;
+			}
 
-  .hero-content h1 {
+			/* .hero-content h1 {
     font-size: 18px;
-  }
+  } */
 
-  .clinic-content {
-    min-width: 100%;
-  }
+				.clinic-content {
+				min-width: 100%;
+			}
 
-  .clinic-content h2 {
+			/* .clinic-content h2 {
     font-size: 18px;
-  }
+  } */
 
-  .header {
-    min-width: 300px;
-    min-height: 80px;
-  }
+				.header {
+				min-width: 300px;
+				min-height: 80px;
+			}
 
-  .class-container {
-    min-width: 100%;
-  }
+			.class-container {
+				min-width: 100%;
+			}
 
-  .class-skill-section {
-    margin-left: 0;
-  }
+			.class-skill-section {
+				margin-left: 0;
+			}
 
-  .class-container-content {
-    padding: 0 6px 0 6px;
-  }
+			.class-container-content {
+				padding: 0 6px 0 6px;
+			}
 
-  /* Home Page */
-  .featured-instructors-width-wrapper {
-    grid-template-columns: 100%;
-  }
+			/* Home Page */
+				.featured-instructors-width-wrapper {
+				grid-template-columns: 100%;
+			}
 
-  #ah-breadcrumb {
-    padding-top: 10px;
-  }
+			#ah-breadcrumb {
+				padding-top: 10px;
+			}
 }
