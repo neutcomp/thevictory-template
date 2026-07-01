@@ -654,11 +654,13 @@ p {
 }
 
 .webp .home-hero-section {
-  background: url(images/home-hero-background.webp) no-repeat;
+	background: url(images/home-hero-background.webp) no-repeat;
+	background-size: cover;
 }
 
 .no-webp .home-hero-section {
-  background: url(images/home-hero-background.jpg) no-repeat;
+	background: url(images/home-hero-background.jpg) no-repeat;
+	background-size: cover;
 }
 
 .home-clinic-section {
