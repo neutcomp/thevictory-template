@@ -852,7 +852,7 @@ h1,
 }
 
 .class-container h2 {
-	font-size: var(--step-3);
+	font-size: var(--step-2);
 	font-weight: 300;
 	line-height: 1.0909090909090908em;
 	padding: var(--space-2xs);
