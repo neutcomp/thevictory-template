@@ -441,7 +441,7 @@ p {
 .button {
 	text-transform: uppercase;
 	text-align: center;
-	padding: var(--space-s) var(--space-m);
+	padding: var(--space-xs) var(--space-xs);
 	background-color: var(--color-text-dark);
 	color: var(--color-text-light);
 	border-radius: 6px;
