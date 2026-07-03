@@ -760,7 +760,7 @@ h1,
 	text-align: center;
 	line-height: 1.9em;
 	float: left;
-	margin: 0 var(--space-m) var(--space-m) var(--space-m);
+	margin: 0 var(--space-xs) var(--space-xs) var(--space-xs);
 	box-shadow: none;
 	box-sizing: border-box;
 	transition: var(--transition-default);
