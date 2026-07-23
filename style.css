@@ -645,6 +645,26 @@ p {
   color: #000;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    position: relative; /* Dient als ankerpunt voor de CTA */
+  }
+
+  .hero-content {
+    position: absolute;
+    bottom: 24px; /* Afstand vanaf de onderkant van de visual */
+    left: 24px;
+    width: auto;
+    max-width: 400px;
+  }
+}
+
 .home-hero-section {
   background-size: cover;
   min-height: 550px;

@@ -3,7 +3,9 @@
     get_header();
 ?>
 <main class="home" role="main" id="main">
-	<div class="home-hero-section">
+	<div class="hero">
+		<div class="home-hero-section"></div>
+
 		<div class="hero-content">
 			<h1>Tafeltennisvereniging The Victory</h1>
 			<p>The Victory is een gezellige tafeltennisvereniging met rond de 100 leden. We hebben zowel jeugd als
@@ -17,6 +19,7 @@
 			</div>
 		</div>
 	</div>
+		
 	<div class="home-philosophy-section">
 		<h2>Kijkje nemen?</h2>
 		<p>Interesse om eens een balletje te komen slaan of een proefles te volgen? Neem dan even contact met ons op
