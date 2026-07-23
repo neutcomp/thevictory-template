@@ -1112,6 +1112,12 @@ p {
     height: auto;
   }
 
+  .menu-footer-menu-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+
   .footer-navigation {
     padding: 0;
   }
