@@ -435,7 +435,7 @@ p {
 .call-to-action {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5em;
+  gap: var(--space-m);
 }
 
 .button {
@@ -729,6 +729,7 @@ p {
 @media (max-width: 576px) {
   .info-section {
     grid-template-columns: 1fr;
+    gap: none;
   }
 }
 
