@@ -577,13 +577,9 @@ p {
 }
 
 .footer-navigation {
-  max-width: 720px;
-  margin: var(--space-m) auto;
-}
-
-.footer-navigation li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style-type: none;
-  float: left;
 }
 
 .footer-navigation a {
@@ -1110,19 +1106,6 @@ p {
     float: none;
     width: 100%;
     height: auto;
-  }
-
-  .footer-navigation {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style-type: none;
-  }
-
-  .footer-navigation li {
-    width: 100%;
-    float: none;
-    margin-top: var(--space-m);
-    text-align: center;
   }
 
   .copyright {
