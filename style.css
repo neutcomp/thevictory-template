@@ -653,13 +653,13 @@ p {
 
 @media (min-width: 768px) {
   .hero {
-    position: relative; /* Dient als ankerpunt voor de CTA */
+    position: relative;
   }
 
   .hero-content {
     position: absolute;
-    bottom: 24px; /* Afstand vanaf de onderkant van de visual */
-    left: 24px;
+    bottom: 24px;
+    right: 24px;
     width: auto;
     max-width: 400px;
   }
@@ -688,12 +688,8 @@ p {
 
 .hero-content {
   background: var(--color-primary);
-  float: right;
-  width: 35%;
-  min-width: 650px;
+  min-width: 520px;
   padding: var(--space-xs);
-  margin-top: 2em;
-  color: #000;
 }
 
 .hero-content p {
