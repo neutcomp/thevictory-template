@@ -582,6 +582,12 @@ p {
   list-style-type: none;
 }
 
+@media (max-width: 576px) {
+  .footer-navigation {
+    grid-template-columns: 1fr;
+  }
+}
+
 .footer-navigation a {
   color: var(--color-text-light);
   text-decoration: none;
