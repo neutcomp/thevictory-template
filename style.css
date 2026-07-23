@@ -720,6 +720,17 @@ p {
   margin-top: var(--space-m);
 }
 
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 576px) {
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+}
+
 .home-philosophy-section,
 .home-location-section {
   box-sizing: border-box;

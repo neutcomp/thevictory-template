@@ -19,28 +19,30 @@
 			</div>
 		</div>
 	</div>
-		
-	<div class="home-philosophy-section">
-		<h2>Kijkje nemen?</h2>
-		<p>Interesse om eens een balletje te komen slaan of een proefles te volgen? Neem dan even contact met ons op
-			zodat we je goed kunnen opvangen.</a></p>
-		<p><a href="mailto:info@thevictory.nl" aria-label="Stuur ons een email">via email</a><br>of <a
-				href="/the-victory/proefles/" aria-label="Lees meer over contactformulier">het
-				contactformulier</a></p>
-	</div>
-	<!-- <div class="home-clinic-section">
-        <div class="clinic-content" style="margin: auto;width:60%">
-            <h2>Tafeltennis clinic gehad? 3x gratis proefles</h2>
-            <p>Wil je na de clinic op school 3x gratis komen trainen? Dat kan! Stuur een mailtje naar <a href="mailto:info@thevictory.nl">info@thevictory.nl</a> of <a href="/the-victory/proefles/">gebruik het formulier</a> dan gaan we dat samen regelen. We hopen je snel te zien.</p>
-        </div>
-    </div> -->
-	<div class="home-location-section">
-		<h2>Adres</h2>
-		<p>'s Gravelandseweg 3a
-			<br> 1381 HH Weesp
-			<br> T: 0294-417637
-			<br> E: <a href="mailto:info@thevictory.nl" aria-label="Stuur ons een email">info@thevictory.nl</a>
-		</p>
+	
+	<div class="info-section">
+		<div class="home-philosophy-section">
+			<h2>Kijkje nemen?</h2>
+			<p>Interesse om eens een balletje te komen slaan of een proefles te volgen? Neem dan even contact met ons op
+				zodat we je goed kunnen opvangen.</a></p>
+			<p><a href="mailto:info@thevictory.nl" aria-label="Stuur ons een email">via email</a><br>of <a
+					href="/the-victory/proefles/" aria-label="Lees meer over contactformulier">het
+					contactformulier</a></p>
+		</div>
+		<!-- <div class="home-clinic-section">
+			<div class="clinic-content" style="margin: auto;width:60%">
+				<h2>Tafeltennis clinic gehad? 3x gratis proefles</h2>
+				<p>Wil je na de clinic op school 3x gratis komen trainen? Dat kan! Stuur een mailtje naar <a href="mailto:info@thevictory.nl">info@thevictory.nl</a> of <a href="/the-victory/proefles/">gebruik het formulier</a> dan gaan we dat samen regelen. We hopen je snel te zien.</p>
+			</div>
+		</div> -->
+		<div class="home-location-section">
+			<h2>Adres</h2>
+			<p>'s Gravelandseweg 3a
+				<br> 1381 HH Weesp
+				<br> T: 0294-417637
+				<br> E: <a href="mailto:info@thevictory.nl" aria-label="Stuur ons een email">info@thevictory.nl</a>
+			</p>
+		</div>
 	</div>
 
 	<div class="nav-bottom">
