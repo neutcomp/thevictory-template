@@ -877,7 +877,7 @@ p {
   gap: var(--space-xs);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .classes-wrapper {
     grid-template-columns: 1fr;
     gap: none;
