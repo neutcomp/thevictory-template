@@ -588,7 +588,7 @@ p {
   list-style-type: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .footer-navigation {
     grid-template-columns: 1fr;
   }
@@ -899,7 +899,7 @@ p {
 }
 
 .class-container h2 {
-  font-size: var(--step-3);
+  font-size: var(--step-1);
   font-weight: 300;
   line-height: 1.3em;
   padding: var(--space-2xs);
