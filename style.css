@@ -434,14 +434,14 @@ p {
 
 .call-to-action {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-m);
+  grid-template-columns: 1fr;
+  gap: none;
 }
 
 @media (min-width: 576px) {
   .call-to-action {
-    grid-template-columns: 1fr;
-    gap: none;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-m);
   }
 }
 
