@@ -413,7 +413,7 @@ code {
 	 */
 
 .u-container {
-  padding: var(--space-xs);
+  padding: var(--space-3xs);
 }
 
 .main-content-width-wrapper {
