@@ -668,6 +668,7 @@ p {
     right: 24px;
     width: auto;
     max-width: 400px;
+    min-width: none;
   }
 }
 
