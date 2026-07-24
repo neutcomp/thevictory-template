@@ -411,6 +411,11 @@ code {
 /**
 	 * Global Styles
 	 */
+
+.u-container {
+  padding: var(--space-xs);
+}
+
 .main-content-width-wrapper {
   max-width: 1200px;
   margin: 0 auto;
