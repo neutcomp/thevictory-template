@@ -812,7 +812,7 @@ p {
   text-align: center;
   line-height: 1.3em;
   float: left;
-  margin: 0 var(--space-xs) var(--space-xs) var(--space-xs);
+  margin: 0 var(--space-2xs) var(--space-2xs) var(--space-2xs);
   box-shadow: none;
   box-sizing: border-box;
   transition: var(--transition-default);
