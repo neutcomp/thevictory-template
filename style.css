@@ -518,7 +518,7 @@ p {
   display: block;
   float: left;
   margin-left: var(--space-m);
-  margin-top: var(--space-m);
+  margin-top: 0;
 }
 
 .main-navigation {
@@ -749,8 +749,8 @@ p {
   font-size: var(--step-1);
   line-height: 1.3em;
   color: var(--color-text-light);
-  margin-top: var(--space-m);
-  margin-bottom: var(--space-m);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xs);
   padding: var(--space-2xs);
   text-align: center;
 }
@@ -778,7 +778,7 @@ p {
 }
 
 .featured-instructors-width-wrapper {
-  margin: var(--space-m) auto;
+  margin: var(--space-xs) auto;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 33% 33% 33%;
