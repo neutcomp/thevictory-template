@@ -6,11 +6,12 @@
 
 <?php get_header(); ?>
 
+<div class="classes-entry">
+  <h1>Tafeltennis oefeningen</h1>
+  <p>Hier onder zie je een overzicht van verschillende trainingsvormen bij tafeltennis.</p>
+</div>
+
 <div class="classes-wrapper" id="main">
-	<div class="classes-entry">
-		<h1>Tafeltennis oefeningen</h1>
-		<p>Hier onder zie je een overzicht van verschillende trainingsvormen bij tafeltennis.</p>
-	</div>
 	<?php
         $args = array(
           'post_type' => 'ttv_oefeningen', 
