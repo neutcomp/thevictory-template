@@ -55,7 +55,7 @@
 		<header class="header">
 			<a href="#main" class="skip">Menu overslaan</a>
 			<nav class="navbar navbar-expand-md navbar-light bg-light" aria-label="Header menu">
-				<div class=" container-fluid">
+				<div class="container-fluid">
 					<a href="/" title="The Victory logo"><img
 							src="<?php bloginfo('template_url') ?>/images/The-Victory-Logo-Transparant-Klein.png"
 							alt="The Victory logo" class="logo" width="200" height="75" role="img"></a>

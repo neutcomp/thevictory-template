@@ -521,8 +521,20 @@ p {
   height: auto;
   display: block;
   float: left;
-  margin-left: var(--space-m);
+  margin-left: 0;
   margin-top: 0;
+}
+
+@media screen and (max-width: 1122px) {
+  .logo {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    width: 125px;
+  }
 }
 
 .main-navigation {
