@@ -619,7 +619,7 @@ p {
 
 .copyright {
   color: var(--color-text-light);
-  margin-bottom: auto auto var(--space-xs) auto;
+  margin: auto auto var(--space-xs) auto;
   text-align: center;
 }
 
