@@ -416,6 +416,10 @@ code {
   padding: var(--space-3xs);
 }
 
+.main-content {
+  margin-bottom: var(--space-m);
+}
+
 .main-content-width-wrapper {
   max-width: 1200px;
   margin: 0 auto;
