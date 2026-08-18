@@ -26,6 +26,7 @@ textdomain: thevictory
   --transition-default: 0.5s all;
   --transition-short: 0.25s all;
   --spacing-default: 1em;
+  --border-radius-default: 0.5rem;
 }
 
 /**
@@ -507,7 +508,6 @@ p {
   height: 70px;
   z-index: 90;
   margin: 0 auto;
-  border-bottom: 1px solid #dadada;
   width: 100%;
   position: sticky;
   top: 0;
@@ -704,6 +704,7 @@ p {
   background: url(images/home-hero-background.webp) no-repeat;
   background-size: cover;
   background-position: top;
+  border-radius: var(--border-radius-default);
 }
 
 .no-webp .home-hero-section {
@@ -765,6 +766,7 @@ p {
   margin-bottom: var(--space-xs);
   padding: var(--space-2xs);
   text-align: center;
+  border-radius: var(--border-radius-default);
 }
 
 .home-philosophy-section {
