@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1100px",
+      "wideSize": "1400px"
+    },
+    "color": {
+      "palette": [
+        { "slug": "primary", "color": "#ffbb02", "name": "Primary" },
+        { "slug": "secondary", "color": "#027d7d", "name": "Secondary" },
+        { "slug": "text", "color": "#000000", "name": "Text" },
+        { "slug": "background", "color": "#ffffff", "name": "Background" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "raleway",
+          "fontFamily": "Raleway, sans-serif",
+          "name": "Raleway"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "var:preset|color|text",
+      "background": "var:preset|color|background"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|raleway"
+    },
+    "spacing": {
+      "blockGap": "1.5rem"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var:preset|color|primary"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "full-width",
+      "title": "Full Width",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "two-column",
+      "title": "Two Column Sidebar",
+      "postTypes": ["page"]
+    }
+  ]
+}
