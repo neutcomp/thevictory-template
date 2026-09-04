@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eaebed" />
+      <stop offset="100%" stop-color="#cfd2d6" />
+    </radialGradient>
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#bg-grad)" />
+
+  <!-- Kids T-Shirt Group -->
+  <g filter="url(#subtle-shadow)" stroke="#272b30" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left Sleeve -->
+    <path d="M 155 110 L 85 195 L 125 228 L 160 178 Z" fill="#9ca1ab" />
+    <!-- Left Sleeve Hem Line -->
+    <path d="M 92 188 L 132 221" stroke="#272b30" stroke-width="3.5" fill="none" />
+
+    <!-- Right Sleeve -->
+    <path d="M 345 110 L 415 195 L 375 228 L 340 178 Z" fill="#9ca1ab" />
+    <!-- Right Sleeve Hem Line -->
+    <path d="M 408 188 L 368 221" stroke="#272b30" stroke-width="3.5" fill="none" />
+
+    <!-- Main Body -->
+    <path d="M 155 110 
+             Q 200 135 250 135 
+             Q 300 135 345 110 
+             L 338 185 
+             Q 345 300 350 420 
+             L 150 420 
+             Q 155 300 162 185 Z" fill="#636873" />
+
+    <!-- Side Panels (Sporty Kids design) -->
+    <path d="M 162 185 Q 155 300 150 420 L 175 420 Q 180 300 185 185 Z" fill="#888e99" stroke="#272b30" stroke-width="4" />
+    <path d="M 338 185 Q 345 300 350 420 L 325 420 Q 320 300 315 185 Z" fill="#888e99" stroke="#272b30" stroke-width="4" />
+
+    <!-- Bottom Hem Band -->
+    <path d="M 150 405 L 350 405" stroke="#272b30" stroke-width="3.5" fill="none" />
+
+    <!-- Collar Outer -->
+    <path d="M 190 95 Q 250 145 310 95" fill="#888e99" stroke="#272b30" stroke-width="5.5" />
+    <!-- Collar Inner (Neck hole) -->
+    <path d="M 200 95 Q 250 130 300 95 Q 250 82 200 95 Z" fill="#4d515a" stroke="#272b30" stroke-width="4" />
+    <!-- Collar Stitch -->
+    <path d="M 195 102 Q 250 140 305 102" fill="none" stroke="#272b30" stroke-width="2.5" />
+
+    <!-- Raglan Shoulder Seam Lines -->
+    <path d="M 205 98 L 155 110" stroke="#272b30" stroke-width="4" />
+    <path d="M 295 98 L 345 110" stroke="#272b30" stroke-width="4" />
+    <path d="M 225 125 L 160 178" stroke="#272b30" stroke-width="4" />
+    <path d="M 275 125 L 340 178" stroke="#272b30" stroke-width="4" />
+
+    <!-- Kids Graphic / Star Emblem on Chest -->
+    <g transform="translate(250, 240) scale(0.9)" stroke="none" fill="#9ca1ab">
+      <!-- Playful Star Icon -->
+      <polygon points="0,-32 10,-10 33,-7 16,10 20,33 0,21 -20,33 -16,10 -33,-7 -10,-10" />
+      <!-- Star inner highlight -->
+      <polygon points="0,-22 7,-7 23,-5 11,7 14,23 0,15 -14,23 -11,7 -23,-5 -7,-7" fill="#cfd2d6" opacity="0.6" />
+    </g>
+
+    <!-- Athletic Motion Arcs below star -->
+    <path d="M 220 290 Q 250 300 280 290" stroke="#9ca1ab" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M 230 302 Q 250 310 270 302" stroke="#9ca1ab" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+</svg>

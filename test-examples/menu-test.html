@@ -1,131 +1,256 @@
 <html lang="nl-NL" class="no-js no-svg">
-	<head>
-		<style>
-			@layer general-styling {
-				:root {
-								--neutral-50: light-dark(hsl(30, 15%, 92%), hsl(60, 5%, 13%));
-					--neutral-100: light-dark(hsl(30, 12%, 89%), hsl(60, 4%, 16%));
-					--neutral-200: light-dark(hsl(30, 10%, 86%), hsl(60, 3%, 19%));
-					--neutral-300: light-dark(hsl(30, 8%, 83%), hsl(60, 2%, 22%));
-					--neutral-400: light-dark(hsl(30, 10%, 80%), hsl(60, 3%, 24%));
-					--neutral-500: light-dark(hsl(30, 10%, 74%), hsl(60, 4%, 28%));
-					--neutral-600: light-dark(hsl(30, 8%, 64%), hsl(60, 5%, 35%));
-					--neutral-700: light-dark(hsl(30, 6%, 52%), hsl(60, 2%, 50%));
-					--neutral-800: light-dark(hsl(30, 8%, 38%), hsl(60, 3%, 70%));
-					--neutral-900: light-dark(hsl(30, 12%, 12%), hsl(60, 4%, 85%));
+  <head>
+    <style>
+      @layer general-styling {
+        :root {
+          --neutral-50: light-dark(hsl(30, 15%, 92%), hsl(60, 5%, 13%));
+          --neutral-100: light-dark(hsl(30, 12%, 89%), hsl(60, 4%, 16%));
+          --neutral-200: light-dark(hsl(30, 10%, 86%), hsl(60, 3%, 19%));
+          --neutral-300: light-dark(hsl(30, 8%, 83%), hsl(60, 2%, 22%));
+          --neutral-400: light-dark(hsl(30, 10%, 80%), hsl(60, 3%, 24%));
+          --neutral-500: light-dark(hsl(30, 10%, 74%), hsl(60, 4%, 28%));
+          --neutral-600: light-dark(hsl(30, 8%, 64%), hsl(60, 5%, 35%));
+          --neutral-700: light-dark(hsl(30, 6%, 52%), hsl(60, 2%, 50%));
+          --neutral-800: light-dark(hsl(30, 8%, 38%), hsl(60, 3%, 70%));
+          --neutral-900: light-dark(hsl(30, 12%, 12%), hsl(60, 4%, 85%));
 
-					--surface-1: var(--neutral-50);
-					--surface-2: var(--neutral-100);
-					--surface-3: var(--neutral-200);
-					--surface-4: var(--neutral-300);
+          --surface-1: var(--neutral-50);
+          --surface-2: var(--neutral-100);
+          --surface-3: var(--neutral-200);
+          --surface-4: var(--neutral-300);
 
-					--border-subtle: var(--neutral-400);
-					--border-default: var(--neutral-500);
-					--border-strong: var(--neutral-600);
+          --border-subtle: var(--neutral-400);
+          --border-default: var(--neutral-500);
+          --border-strong: var(--neutral-600);
 
-					--text-primary: var(--neutral-900);
-					--text-secondary: var(--neutral-800);
-					--text-muted: var(--neutral-700);
-					--text-inverse: var(--neutral-50);
+          --text-primary: var(--neutral-900);
+          --text-secondary: var(--neutral-800);
+          --text-muted: var(--neutral-700);
+          --text-inverse: var(--neutral-50);
 
-					--link: inherit;
-					--link-hover: var(--brand-blue);
-					--link-active: var(--brand-red);
-					--accent: light-dark(hsl(357, 60%, 40%), hsl(357, 60%, 40%));
-					--primary: var(--brand-blue);
+          --link: inherit;
+          --link-hover: var(--brand-blue);
+          --link-active: var(--brand-red);
+          --accent: light-dark(hsl(357, 60%, 40%), hsl(357, 60%, 40%));
+          --primary: var(--brand-blue);
 
-					/* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1240,21,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-					--fs--2: clamp(0.7387rem, 0.7987rem + -0.0775vw, 0.7813rem);
-					--fs--1: clamp(0.9375rem, 0.9182rem + 0.0857vw, 0.9846rem);
-					--fs-0: clamp(1.125rem, 1.0483rem + 0.3409vw, 1.3125rem);
-					--fs-1: clamp(1.35rem, 1.1865rem + 0.7265vw, 1.7496rem);
-					--fs-2: clamp(1.62rem, 1.3287rem + 1.2948vw, 2.3322rem);
-					--fs-3: clamp(1.944rem, 1.4675rem + 2.1178vw, 3.1088rem);
-					--fs-4: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
-					--fs-5: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
+          /* @link https://utopia.fyi/type/calculator?c=360,18,1.2,1240,21,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+          --fs--2: clamp(0.7387rem, 0.7987rem + -0.0775vw, 0.7813rem);
+          --fs--1: clamp(0.9375rem, 0.9182rem + 0.0857vw, 0.9846rem);
+          --fs-0: clamp(1.125rem, 1.0483rem + 0.3409vw, 1.3125rem);
+          --fs-1: clamp(1.35rem, 1.1865rem + 0.7265vw, 1.7496rem);
+          --fs-2: clamp(1.62rem, 1.3287rem + 1.2948vw, 2.3322rem);
+          --fs-3: clamp(1.944rem, 1.4675rem + 2.1178vw, 3.1088rem);
+          --fs-4: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
+          --fs-5: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
 
-					/* @link https://utopia.fyi/space/calculator?c=360,18,1.2,1240,21,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-					--space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
-					--space-2xs: clamp(0.5625rem, 0.5114rem + 0.2273vw, 0.6875rem);
-					--space-xs: clamp(0.875rem, 0.8239rem + 0.2273vw, 1rem);
-					--space-s: clamp(1.125rem, 1.0483rem + 0.3409vw, 1.3125rem);
-					--space-m: clamp(1.6875rem, 1.5597rem + 0.5682vw, 2rem);
-					--space-l: clamp(2.25rem, 2.0966rem + 0.6818vw, 2.625rem);
-					--space-xl: clamp(3.375rem, 3.1449rem + 1.0227vw, 3.9375rem);
-					--space-2xl: clamp(4.5rem, 4.1932rem + 1.3636vw, 5.25rem);
-					--space-3xl: clamp(6.75rem, 6.2898rem + 2.0455vw, 7.875rem);
-					--space-4xl: clamp(9rem, 8.3864rem + 2.7273vw, 10.5rem);
+          /* @link https://utopia.fyi/space/calculator?c=360,18,1.2,1240,21,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+          --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+          --space-2xs: clamp(0.5625rem, 0.5114rem + 0.2273vw, 0.6875rem);
+          --space-xs: clamp(0.875rem, 0.8239rem + 0.2273vw, 1rem);
+          --space-s: clamp(1.125rem, 1.0483rem + 0.3409vw, 1.3125rem);
+          --space-m: clamp(1.6875rem, 1.5597rem + 0.5682vw, 2rem);
+          --space-l: clamp(2.25rem, 2.0966rem + 0.6818vw, 2.625rem);
+          --space-xl: clamp(3.375rem, 3.1449rem + 1.0227vw, 3.9375rem);
+          --space-2xl: clamp(4.5rem, 4.1932rem + 1.3636vw, 5.25rem);
+          --space-3xl: clamp(6.75rem, 6.2898rem + 2.0455vw, 7.875rem);
+          --space-4xl: clamp(9rem, 8.3864rem + 2.7273vw, 10.5rem);
 
-					/* One-up pairs */
-					--space-3xs-2xs: clamp(0.3125rem, 0.1591rem + 0.6818vw, 0.6875rem);
-					--space-2xs-xs: clamp(0.5625rem, 0.3835rem + 0.7955vw, 1rem);
-					--space-xs-s: clamp(0.875rem, 0.696rem + 0.7955vw, 1.3125rem);
-					--space-s-m: clamp(1.125rem, 0.767rem + 1.5909vw, 2rem);
-					--space-m-l: clamp(1.6875rem, 1.304rem + 1.7045vw, 2.625rem);
-					--space-l-xl: clamp(2.25rem, 1.5597rem + 3.0682vw, 3.9375rem);
-					--space-xl-2xl: clamp(3.375rem, 2.608rem + 3.4091vw, 5.25rem);
-					--space-2xl-3xl: clamp(4.5rem, 3.1193rem + 6.1364vw, 7.875rem);
-					--space-3xl-4xl: clamp(6.75rem, 5.2159rem + 6.8182vw, 10.5rem);
+          /* One-up pairs */
+          --space-3xs-2xs: clamp(0.3125rem, 0.1591rem + 0.6818vw, 0.6875rem);
+          --space-2xs-xs: clamp(0.5625rem, 0.3835rem + 0.7955vw, 1rem);
+          --space-xs-s: clamp(0.875rem, 0.696rem + 0.7955vw, 1.3125rem);
+          --space-s-m: clamp(1.125rem, 0.767rem + 1.5909vw, 2rem);
+          --space-m-l: clamp(1.6875rem, 1.304rem + 1.7045vw, 2.625rem);
+          --space-l-xl: clamp(2.25rem, 1.5597rem + 3.0682vw, 3.9375rem);
+          --space-xl-2xl: clamp(3.375rem, 2.608rem + 3.4091vw, 5.25rem);
+          --space-2xl-3xl: clamp(4.5rem, 3.1193rem + 6.1364vw, 7.875rem);
+          --space-3xl-4xl: clamp(6.75rem, 5.2159rem + 6.8182vw, 10.5rem);
 
-					/* Custom pairs */
-					--space-s-l: clamp(1.125rem, 0.5114rem + 2.7273vw, 2.625rem);
-					--space-2xl-4xl: clamp(4.5rem, 2.0455rem + 10.9091vw, 10.5rem);
-				}
-			}
+          /* Custom pairs */
+          --space-s-l: clamp(1.125rem, 0.5114rem + 2.7273vw, 2.625rem);
+          --space-2xl-4xl: clamp(4.5rem, 2.0455rem + 10.9091vw, 10.5rem);
+        }
+      }
 
-			.information-menu {
-				position: absolute;
-				inset: auto;
+      .popup-menu {
+        position: absolute;
+        inset: auto;
 
-				top: anchor(bottom);
-				left: anchor(left);
+        top: anchor(bottom);
+        left: anchor(left);
 
-				min-width: anchor-size(width);
-				box-sizing: border-box;
+        min-width: anchor-size(width);
+        box-sizing: border-box;
 
-				gap: 1rem;
-				grid-template-columns: auto 1fr;
-				border: 1px solid var(--border-subtle);
-				border-radius: 0.75rem;
-				padding: var(--space-m);
-				background: var(--surface-1);
-				color: var(--text-primary);
-				box-shadow: 0 8px 32px hsl(0 0% 0% / 0.12);
-				inline-size: min(90vw, 28rem);
+        border: 1px solid var(--border-subtle);
+        border-radius: 0.75rem;
+        padding: var(--space-xs);
+        background: var(--surface-1);
+        color: var(--text-primary);
+        box-shadow: 0 8px 32px hsl(0 0% 0% / 0.12);
+        inline-size: min(40vw, 20rem);
 
-				opacity: 0;
-				translate: 0 30px;
+        margin-block-start: 0.5rem;
+        opacity: 0;
+        translate: 0 30px;
 
-				transition-property: display, overlay, opacity, translate;
-				transition-duration: 0.75s;
-				transition-behavior: allow-discrete;
+        transition-property: display, overlay, opacity, translate;
+        transition-duration: 0.75s;
+        transition-behavior: allow-discrete;
 
-				&:popover-open {
-					display: grid;
-					opacity: 1;
-					translate: 0px 0px;
+        &:popover-open {
+          opacity: 1;
+          translate: 0px 0px;
 
-					@starting-style {
-						opacity: 0;
-						translate: 0 -30px;
-					}
-				}
-			}		</style>
-	</head>
-<body>
-		<!-- https://codepen.io/editor/kevinpowell/pen/019edff0-144f-762c-85f3-9483030c56f4 -->
-		<button type="button" popovertarget="information-menu" aria-label="Informatie">Informatie</button>
+          @starting-style {
+            opacity: 0;
+            translate: 0 -30px;
+          }
+        }
 
-		<div id="information-menu" class="information-menu" popover>
-			<ul class="dropdown-menu">
-				<li><a href="https://thevictory.nl/algemene-informatie/openingstijden/">Openingstijden</a></li>
-				<li><a href="https://thevictory.nl/algemene-informatie/">Algemene informatie</a></li>
-				<li><a href="https://thevictory.nl/the-victory/lidmaatschap/">Lid worden</a></li>
-				<li><a href="https://thevictory.nl/the-victory/bestuur/">Bestuur</a></li>
-				<li><a href="https://thevictory.nl/the-victory/commissies/">Commissies</a></li>
-				<li><a href="https://thevictory.nl/algemene-informatie/barschema/">Bardienst</a></li>
-				<li><a href="https://thevictory.nl/sponsoring/">Sponsoring</a></li>
-			</ul>
-		</div>
-</body>
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin-bottom: var(--space-2xs);
+          }
+        }
+
+        a {
+          display: block;
+          padding: var(--space-2xs) var(--space-xs);
+          border-radius: 0.375rem;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        a:hover {
+          background-color: var(--neutral-300);
+        }
+      }
+
+      .flex-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2xs);
+
+        a {
+          flex: 1 1 calc(50% - var(--space-2xs));
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: var(--space-2xs);
+          border-radius: 0.5rem;
+          border: 1px solid var(--border-subtle);
+          background: var(--surface-2);
+          transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+          gap: 0.35rem;
+        }
+
+        a:hover {
+          background-color: var(--neutral-300);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px hsl(0 0% 0% / 0.08);
+        }
+
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+          border-radius: 0.375rem;
+          display: block;
+        }
+
+        span {
+          font-size: var(--fs--1);
+          font-weight: 500;
+          color: var(--text-primary);
+        }
+      }
+
+      .button {
+        padding: 10px;
+        text-transform: uppercase;
+        border-radius: 0.75rem;
+        border-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- https://codepen.io/editor/kevinpowell/pen/019edff0-144f-762c-85f3-9483030c56f4 -->
+    <button
+      type="button"
+      class="button"
+      popovertarget="information-menu"
+      aria-label="Informatie"
+    >
+      Informatie
+    </button>
+
+    <button
+      type="button"
+      class="button"
+      popovertarget="clubkleding-menu"
+      aria-label="Clubkleding"
+    >
+      Clubkleding
+    </button>
+
+    <div id="information-menu" class="popup-menu" popover>
+      <ul class="menu-items">
+        <li>
+          <a href="https://thevictory.nl/algemene-informatie/openingstijden/"
+            >Openingstijden</a
+          >
+        </li>
+        <li>
+          <a href="https://thevictory.nl/algemene-informatie/"
+            >Algemene informatie</a
+          >
+        </li>
+        <li>
+          <a href="https://thevictory.nl/the-victory/lidmaatschap/"
+            >Lid worden</a
+          >
+        </li>
+        <li>
+          <a href="https://thevictory.nl/the-victory/bestuur/">Bestuur</a>
+        </li>
+        <li>
+          <a href="https://thevictory.nl/the-victory/commissies/">Commissies</a>
+        </li>
+        <li>
+          <a href="https://thevictory.nl/algemene-informatie/barschema/"
+            >Bardienst</a
+          >
+        </li>
+        <li><a href="https://thevictory.nl/sponsoring/">Sponsoring</a></li>
+      </ul>
+    </div>
+
+    <div id="clubkleding-menu" class="popup-menu flex-menu" popover>
+      <a href="https://thevictory.nl/winkel/">
+        <img src="../img/kleding-alles.jpg" alt="Alles" />
+        <span>Alles</span>
+      </a>
+      <a href="https://thevictory.nl/product-categorie/heren/">
+        <img src="../img/kleding-heren.jpg" alt="Heren" />
+        <span>Heren</span>
+      </a>
+      <a href="https://thevictory.nl/product-categorie/dames/">
+        <img src="../img/kleding-dames.jpg" alt="Dames" />
+        <span>Dames</span>
+      </a>
+      <a href="https://thevictory.nl/product-categorie/kinderen//">
+        <img src="../img/kleding-kinderen.svg" alt="Kinderen" />
+        <span>Kinderen</span>
+      </a>
+    </div>
+  </body>
 </html>
