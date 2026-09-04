@@ -800,3 +800,7 @@ add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' )
 function woo_custom_breadrumb_home_url() {
     return 'https://www.thevictory.nl/winkel';
 }
+
+add_filter( 'woocommerce_coming_soon_banner_text', function( $text ) {
+    return 'De website is tijdelijk even offline. We zijn bezig met een nieuwe versie van de kleding. Excuses voor het ongemak.';
+} );
