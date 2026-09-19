@@ -19,6 +19,13 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="home-clinic-section">
+		<div class="clinic-content" style="text-align: center;">
+			<h2>Grote Clubactie is begonnen!</h2>
+			<div style="font-size: 36px;"><a href="https://lot.clubactie.nl/lot/tafeltennisvereniging-the-victory/200270">Koop hier een lot en steun de club!</a></div>
+		</div>
+	</div>
 	
 	<div class="info-section">
 		<div class="home-philosophy-section">
