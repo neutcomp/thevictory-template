@@ -166,6 +166,24 @@ function create_post_types() {
 }
 add_action( 'init', 'create_post_types' );
 
+function thevictory_slide_admin_columns( $columns ) {
+    if ( isset( $columns['date'] ) ) {
+        $columns['date'] = __( 'Last Modified', 'thevictory' );
+    }
+
+    return $columns;
+}
+add_filter( 'manage_slide_posts_columns', 'thevictory_slide_admin_columns' );
+
+function thevictory_slide_admin_date( $date, $post, $column_name, $mode ) {
+    if ( 'date' === $column_name && 'slide' === $post->post_type ) {
+        return get_the_modified_date( '', $post );
+    }
+
+    return $date;
+}
+add_filter( 'post_date_column_time', 'thevictory_slide_admin_date', 10, 4 );
+
 function admin_init(){
     add_meta_box("spelletjesInformatie", "Spelletje informatie", "meta_options_spelletjes", "ttv_spelletjes", "normal");
     add_meta_box("spelletjesInformatie", "Oefeningen niveau", "meta_options_oefeningen", "ttv_oefeningen", "normal");
