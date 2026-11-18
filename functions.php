@@ -193,33 +193,30 @@ add_action('admin_init', 'admin_init');
 function meta_options_spelletjes(){
     global $post;
 
-    $custom = get_post_custom($post->ID);
-    $aantalPersonen = $custom["aantal_personen"][0];
-    $benodigdheden = $custom["benodigdheden"][0];
-    $niveau = $custom["niveau"][0];
+    $aantalPersonen = get_post_meta( $post->ID, 'aantal_personen', true );
+    $benodigdheden = get_post_meta( $post->ID, 'benodigdheden', true );
+    $niveau = get_post_meta( $post->ID, 'niveau', true );
     ?>
 <?php wp_nonce_field( 'thevictory_save_custom_posttype', 'thevictory_custom_posttype_nonce' ); ?>
 <label>Aantal personen:</label><br />
-<input name="aantal_personen" value="<?php echo $aantalPersonen; ?>" /> <br /><br />
+<input name="aantal_personen" value="<?php echo esc_attr( $aantalPersonen ); ?>" /> <br /><br />
 
 <label>Benodigdheden:</label><br />
-<input name="benodigdheden" value="<?php echo $benodigdheden; ?>" /> <br /><br />
+<input name="benodigdheden" value="<?php echo esc_attr( $benodigdheden ); ?>" /> <br /><br />
 
 <label>Niveau:</label><br />
 <?php
     $optionNiveau = array('Beginner', 'Normaal', 'Gevorderde');
 
     foreach ($optionNiveau as $speelNiveau) {
-        echo '<br><input type="radio" name="niveau" value="', $speelNiveau, '"', $niveau == $speelNiveau ? ' checked="checked"' : '', ' />', $speelNiveau;
+        echo '<br><input type="radio" name="niveau" value="', esc_attr( $speelNiveau ), '"', checked( $niveau, $speelNiveau, false ), ' />', esc_html( $speelNiveau );
     }
 }
 
 function meta_options_oefeningen(){
     global $post;
 
-    $custom = get_post_custom($post->ID);
-
-    $niveau = $custom["niveau"][0];
+    $niveau = get_post_meta( $post->ID, 'niveau', true );
     ?>
 <?php wp_nonce_field( 'thevictory_save_custom_posttype', 'thevictory_custom_posttype_nonce' ); ?>
 <label>Niveau:</label><br />
@@ -227,7 +224,7 @@ function meta_options_oefeningen(){
     $optionNiveau = array('Beginner', 'Normaal', 'Gevorderde');
 
     foreach ($optionNiveau as $speelNiveau) {
-        echo '<br><input type="radio" name="niveau" value="', $speelNiveau, '"', $niveau == $speelNiveau ? ' checked="checked"' : '', ' />', $speelNiveau;
+        echo '<br><input type="radio" name="niveau" value="', esc_attr( $speelNiveau ), '"', checked( $niveau, $speelNiveau, false ), ' />', esc_html( $speelNiveau );
     }
 }
 
