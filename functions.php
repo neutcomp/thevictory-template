@@ -198,6 +198,7 @@ function meta_options_spelletjes(){
     $benodigdheden = $custom["benodigdheden"][0];
     $niveau = $custom["niveau"][0];
     ?>
+<?php wp_nonce_field( 'thevictory_save_custom_posttype', 'thevictory_custom_posttype_nonce' ); ?>
 <label>Aantal personen:</label><br />
 <input name="aantal_personen" value="<?php echo $aantalPersonen; ?>" /> <br /><br />
 
@@ -220,6 +221,7 @@ function meta_options_oefeningen(){
 
     $niveau = $custom["niveau"][0];
     ?>
+<?php wp_nonce_field( 'thevictory_save_custom_posttype', 'thevictory_custom_posttype_nonce' ); ?>
 <label>Niveau:</label><br />
 <?php
     $optionNiveau = array('Beginner', 'Normaal', 'Gevorderde');
@@ -229,12 +231,54 @@ function meta_options_oefeningen(){
     }
 }
 
-function save_custom_posttype(){
-    global $post;
+function save_custom_posttype( $post_id ) {
+    $post_type = get_post_type( $post_id );
+    if ( ! in_array( $post_type, array( 'ttv_spelletjes', 'ttv_oefeningen' ), true ) ) {
+        return;
+    }
 
-    update_post_meta($post->ID, "aantal_personen", $_POST["aantal_personen"]);
-    update_post_meta($post->ID, "benodigdheden", $_POST["benodigdheden"]);
-    update_post_meta($post->ID, "niveau", $_POST["niveau"]);
+    if ( ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+        || wp_is_post_autosave( $post_id )
+        || wp_is_post_revision( $post_id )
+    ) {
+        return;
+    }
+
+    if ( ! isset( $_POST['thevictory_custom_posttype_nonce'] )
+        || ! is_string( $_POST['thevictory_custom_posttype_nonce'] )
+        || ! wp_verify_nonce(
+            wp_unslash( $_POST['thevictory_custom_posttype_nonce'] ),
+            'thevictory_save_custom_posttype'
+        )
+        || ! current_user_can( 'edit_post', $post_id )
+    ) {
+        return;
+    }
+
+    if ( 'ttv_spelletjes' === $post_type ) {
+        if ( isset( $_POST['aantal_personen'] ) && is_string( $_POST['aantal_personen'] ) ) {
+            update_post_meta(
+                $post_id,
+                'aantal_personen',
+                sanitize_text_field( wp_unslash( $_POST['aantal_personen'] ) )
+            );
+        }
+
+        if ( isset( $_POST['benodigdheden'] ) && is_string( $_POST['benodigdheden'] ) ) {
+            update_post_meta(
+                $post_id,
+                'benodigdheden',
+                sanitize_text_field( wp_unslash( $_POST['benodigdheden'] ) )
+            );
+        }
+    }
+
+    if ( isset( $_POST['niveau'] ) && is_string( $_POST['niveau'] ) ) {
+        $niveau = sanitize_text_field( wp_unslash( $_POST['niveau'] ) );
+        if ( in_array( $niveau, array( 'Beginner', 'Normaal', 'Gevorderde' ), true ) ) {
+            update_post_meta( $post_id, 'niveau', $niveau );
+        }
+    }
 }
 add_action('save_post', 'save_custom_posttype');
 
